@@ -1375,14 +1375,29 @@ body.popOutPage {
 .calendarColorScheme {
   padding: 0;
   margin: 0;
+  text-align: left;
 }
 .calendarColorScheme > li {
   padding: 0;
   margin: 0;
   list-style: none;
 }
+.calendarColorScheme:before,
+.calendarColorScheme:after {
+  content: " ";
+  display: table;
+}
+.calendarColorScheme:after {
+  clear: both;
+}
+@media (min-width: 400px) and (max-width: 767px) {
+  .calendarColorScheme {
+    text-align: center;
+  }
+}
 .calendarColorScheme > li {
-  margin-bottom: 6px;
+  display: inline-block;
+  margin: 0 20px 5px 2px;
 }
 .calendarColorScheme > li > span {
   display: inline-block;
@@ -1410,6 +1425,7 @@ body.popOutPage {
   padding-left: 42px;
   padding-top: 12px;
   position: relative;
+  margin-bottom: 10px;
 }
 .tsmc-alert.pink {
   background: #f7e9e9;
@@ -1420,6 +1436,9 @@ body.popOutPage {
   position: absolute;
   top: 10px;
   left: 10px;
+}
+.tsmc-alert > span.icon img {
+  max-width: 100%;
 }
 .tsmc-alert a {
   white-space: nowrap;
@@ -1463,6 +1482,8 @@ body.popOutPage {
 #bookingProgress > li.active .progressItem {
   opacity: 1;
   filter: alpha(opacity=100);
+  color: #b32a2a;
+  font-weight: bold;
 }
 #bookingProgress > li:last-child {
   padding-right: 0;
@@ -1481,7 +1502,7 @@ body.popOutPage {
   top: 2px;
 }
 #bookDatePicker {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 #bookDatePicker #datepickerBox {
   background: #f2f2f2;
@@ -1726,61 +1747,69 @@ body.popOutPage {
 #ui-datepicker-div .ui-datepicker-unselectable.ui-state-disabled.fullBooked .ui-state-default {
   background: #cccccc;
 }
-#bookTimePicker {
+#bookTimePicker,
+.timePickerGroup {
   margin-bottom: 50px;
 }
-#bookTimePicker #timeList {
+#bookTimePicker #timeList,
+.timePickerGroup #timeList {
   padding: 0;
   margin: 0;
   background: #f2f2f2;
-  min-height: 100px;
-  padding: 20px 20px 10px;
+  padding: 12px 12px 3px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
 }
-#bookTimePicker #timeList > li {
+#bookTimePicker #timeList > li,
+.timePickerGroup #timeList > li {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-#bookTimePicker #timeList.invisible {
+#bookTimePicker #timeList.invisible,
+.timePickerGroup #timeList.invisible {
   opacity: 0;
   filter: alpha(opacity=0);
 }
-#bookTimePicker #timeList > li {
+#bookTimePicker #timeList > li,
+.timePickerGroup #timeList > li {
   text-align: center;
   background: #808080;
-  min-height: 70px;
-  width: 31%;
+  width: 31.2%;
   color: white;
-  padding: 8px 1%;
+  padding: 5px 1%;
   cursor: pointer;
   display: inline-block;
   margin: 0 1% 10px;
 }
-@media (max-width: 991px) {
-  #bookTimePicker #timeList > li {
+@media (max-width: 767px) {
+  #bookTimePicker #timeList > li,
+  .timePickerGroup #timeList > li {
     width: 48%;
   }
 }
-@media (max-width: 767px) {
-  #bookTimePicker #timeList > li {
+@media (max-width: 580px) {
+  #bookTimePicker #timeList > li,
+  .timePickerGroup #timeList > li {
     width: 100%;
   }
 }
-#bookTimePicker #timeList > li:hover {
+#bookTimePicker #timeList > li:hover,
+.timePickerGroup #timeList > li:hover {
   background: #9a9a9a;
 }
-#bookTimePicker #timeList > li.active {
+#bookTimePicker #timeList > li.active,
+.timePickerGroup #timeList > li.active {
   background: #e50000;
 }
-#bookTimePicker #timeList > li div.time {
+#bookTimePicker #timeList > li div.mainInfo,
+.timePickerGroup #timeList > li div.mainInfo {
   font-size: 18px;
 }
 #bookControlBar {
-  margin: -30px 0 50px;
+  margin: -40px 0 50px;
 }
 #bookControlBar .btn {
   margin-right: 8px;
@@ -1960,11 +1989,6 @@ body.popOutPage {
     padding-bottom: 0;
   }
 }
-#bookForm .visitDateTime #bookDateTimeBox ul li .date input {
-  background: #ffffff url("../img/icon_calendar_20x20px@2x.png") no-repeat left center;
-  background-size: 30px;
-  padding-left: 40px;
-}
 #bookForm .visitDateTime #bookDateTimeBox ul li .time {
   padding: 10px;
   float: left;
@@ -2072,6 +2096,24 @@ body.popOutPage {
 }
 #bookForm .reservationContent {
   background: #f2f2f2;
+}
+#bookForm .input_dateStartAndEnd .till {
+  display: inline;
+  position: absolute;
+  left: 49.5%;
+  width: 0;
+  line-height: 40px;
+}
+@media (max-width: 767px) {
+  #bookForm .input_dateStartAndEnd .till {
+    display: block;
+    position: relative;
+    left: auto;
+    top: auto;
+    width: auto;
+    text-align: center;
+    line-height: 14px;
+  }
 }
 #specialBookingForm {
   margin-top: 20px;
@@ -3306,4 +3348,82 @@ select.form-control {
   -ms-transform: scale(1.02);
   -o-transform: scale(1.02);
   transform: scale(1.02);
+}
+input.datepickerInput {
+  background: #ffffff url("../img/icon_calendar_20x20px@2x.png") no-repeat left center;
+  background-size: 30px;
+  padding-left: 40px;
+}
+#advancedSearchBox {
+  -webkit-transition: background 0.3s;
+  -o-transition: background 0.3s;
+  transition: background 0.3s;
+}
+#advancedSearchBox .titleBtn {
+  font-size: 18px;
+  line-height: 36px;
+  margin-bottom: 0;
+  position: relative;
+  cursor: pointer;
+}
+#advancedSearchBox .titleBtn:before,
+#advancedSearchBox .titleBtn:after {
+  content: " ";
+  display: table;
+}
+#advancedSearchBox .titleBtn:after {
+  clear: both;
+}
+#advancedSearchBox .titleBtn .icon_expand {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border: 2px solid #808080;
+  line-height: 14px;
+  text-align: center;
+  font-size: 24px;
+  color: #808080;
+  top: 5px;
+  background: url(../img/icon_expand_minus_16x16@2x.png) no-repeat center;
+  background-size: 16px 16px;
+  -webkit-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+#advancedSearchBox .titleBtn:hover .icon_expand {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#advancedSearchBox.minify .icon_expand {
+  background: url(../img/icon_expand_plus_16x16@2x.png) no-repeat center;
+  background-size: 16px 16px;
+}
+#advancedSearchBox.minify:hover {
+  background: #cccccc;
+}
+#advancedSearchBox #searchToggleArea {
+  padding-top: 10px;
+}
+#allAvalibleTime {
+  margin-top: -30px;
+}
+#allAvalibleTime .timePickerGroup {
+  margin-bottom: 20px;
+}
+#allAvalibleTime #bookControlBar {
+  margin-top: 0;
+}
+#allAvalibleTime .title {
+  font-size: 16px;
+  margin-bottom: 5px;
 }

@@ -414,8 +414,15 @@ body {
 
 .calendarColorScheme{
 	.listReset;
+	.clearfix;
+	text-align: left;
+	@media (min-width: 400px) and (max-width: @screen-xs-max){
+		text-align: center;
+	}
+
 	>li{
-		margin-bottom:6px;
+		display:inline-block;
+		margin:0 20px 5px 2px;
 
 		>span{
 			display:inline-block;
@@ -440,6 +447,7 @@ body {
   	padding-left:42px;
   	padding-top:12px;
   	position: relative;
+  	margin-bottom:10px;
 
   	&.pink{
   		background:#f7e9e9;
@@ -451,6 +459,10 @@ body {
   		position:absolute;
   		top:10px;
   		left:10px;
+
+  		img{
+  			max-width:100%;
+  		}
   	}
 
   	a{
@@ -490,6 +502,8 @@ body {
 
 		&.active .progressItem{
 			.opacity(1);
+			color:@tsmc-dark-red;
+			font-weight: bold;
 		}
 
 		&:last-child{
@@ -516,7 +530,7 @@ body {
 }
 
 #bookDatePicker{
-	margin-bottom:30px;
+	margin-bottom:20px;
 
 	#datepickerBox{
 		#ui-datepicker-div;
@@ -659,14 +673,14 @@ body {
 	}
 }
 
-#bookTimePicker{
+#bookTimePicker, .timePickerGroup{
 	margin-bottom:50px;
 
 	#timeList{
 		.listReset;
 		background:@tsmc-grey0;
-		min-height:100px;
-		padding:20px 20px 10px;
+		//min-height:100px;
+		padding:12px 12px 3px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
@@ -679,16 +693,15 @@ body {
 		>li{
 			text-align: center;
 			background:@tsmc-grey3;
-			min-height:70px;
-			width:31%;
+			width:31.2%;
 			color:white;
-			padding:8px 1%;
+			padding:5px 1%;
 			cursor: pointer;
 			display:inline-block;
 			margin:0 1% 10px;
 
-			@media (max-width: @screen-sm-max) { width:48%; }
-			@media (max-width: @screen-xs-max) { width:100%; }
+			@media (max-width: @screen-xs-max) { width:48%; }
+			@media (max-width: 580px) { width:100%; }
 
 			&:hover{
 				background:lighten(@tsmc-grey3, 10%)
@@ -698,7 +711,7 @@ body {
 				background:@tsmc-red;
 			}
 
-			div.time{
+			div.mainInfo{
 				font-size:18px;
 			}
 		}
@@ -706,7 +719,7 @@ body {
 }
 
 #bookControlBar{
-	margin:-30px 0 50px;
+	margin:-40px 0 50px;
 
 	.btn{
 		margin-right:8px;
@@ -882,12 +895,6 @@ body {
 						width:45%;
 						white-space: nowrap;
 						@media (max-width: @screen-xs-max) { width:80%; padding-bottom:0; }
-
-						input{
-							background:white url("../img/icon_calendar_20x20px@2x.png") no-repeat left center;
-							background-size:30px;
-							padding-left:40px;
-						}
 					}
 
 					.time{
@@ -998,6 +1005,26 @@ body {
 
 	.reservationContent{
 		background:@tsmc-grey0;
+	}
+
+	.input_dateStartAndEnd{
+		.till{
+			display:inline;
+			position: absolute;
+			left: 49.5%;
+    		width: 0;
+    		line-height: 40px;
+
+    		@media (max-width: @screen-xs-max) {
+    			display:block;
+    			position:relative;
+    			left:auto;
+    			top:auto;
+    			width:auto;
+    			text-align:center;
+    			line-height: 14px;
+    		}
+		}
 	}
 }
 
@@ -2214,6 +2241,87 @@ select.form-control{
 				.scale(1.02);
 			}
 		}
+	}
+}
+
+input.datepickerInput{
+	background:white url("../img/icon_calendar_20x20px@2x.png") no-repeat left center;
+	background-size:30px;
+	padding-left:40px;
+}
+
+#advancedSearchBox{
+	.transition(background .3s);
+
+	.titleBtn{
+		font-size: 18px;
+    	line-height: 36px;
+		margin-bottom:0;
+		position: relative;
+		cursor: pointer;
+		.clearfix;
+
+		.icon_expand{
+			display:block;
+			position: absolute;
+			right:0;
+			width:24px;
+			height:24px;
+			.border-top-radius(3px);
+			.border-bottom-radius(3px);
+			border:2px solid @tsmc-grey3;
+			line-height:14px;
+			text-align:center;
+			font-size:24px;
+			color:@tsmc-grey3;
+			top:5px;
+			background:url(../img/icon_expand_minus_16x16@2x.png) no-repeat center;
+			background-size:16px 16px;
+			.transition(transform .5s);
+			.opacity(.8);
+		}
+
+		&:hover{
+			.icon_expand{
+				.rotate(180deg);
+			}
+		}
+	}
+
+	&.minify {
+		.icon_expand{
+			background:url(../img/icon_expand_plus_16x16@2x.png) no-repeat center;
+			background-size:16px 16px;
+		}
+
+		&:hover{
+			background:@tsmc-grey2;
+		}
+	}
+
+	#searchToggleArea{
+		padding-top:10px;
+	}
+
+	#searchBtn{
+		//margin-left:15px;
+	}
+}
+
+#allAvalibleTime{
+	margin-top:-30px;
+
+	.timePickerGroup{
+		margin-bottom:20px;
+	}
+
+	#bookControlBar{
+		margin-top:0;
+	}
+
+	.title{
+		font-size:16px;
+		margin-bottom:5px;
 	}
 }
 
