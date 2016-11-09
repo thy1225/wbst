@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>台積創新館</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="../../bootstrap-3.3.7-grunt/dist/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="css/mainStyle.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <nav id="navTSMC" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><img alt="台積創新館 - TSMC Museum of Innovation" src="img/tsmc_musium_logo.png" srcset="img/tsmc_musium_logo@2x.png 2x"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">關於台積創新館</a>
+              <ul class="dropdown-menu dropdown-menu-left">
+                <li><a href="about.html">台積創新館簡介</a></li>
+                <li><a href="exhibitionInfo.html">展區概覽</a></li>
+                <li><a href="contact.html">聯絡我們</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">參觀台積創新館</a>
+              <ul class="dropdown-menu dropdown-menu-left">
+                <li><a href="bookOnline_pickDate.html">線上預約參觀</a></li>
+                <li><a href="reservation_login.html">預約查詢</a></li>
+                <li><a href="visitInfo.html">參觀資訊</a></li>
+                <li><a href="directions.html">交通指南</a></li>
+                <li><a href="faq.html">常見問題</a></li>
+              </ul>
+            </li>
+            <li><a class="textBtn" href="news.html">最新消息</a></li>
+            <li id="navBtn_lang"><a href="#">EN</a></li>
+            <li id="navBtn_bookOnline"><a href="bookOnline_pickDate.html">線上預約參觀</a></li>
+          </ul>
+          <div class="backdrop"></div>
+        </div>
+      </div>
+    </nav>
+    <div id="headerBanner"></div>
+    <div id="mainContentBox">
+      <!-- 主內容框架-START -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="sideInfo">
+              <h1>預約查詢</h1>
+              <p>您可以透過線上預約時填寫的聯絡人資訊，查詢預約資料。</p>
+              <p>欲取消預約，請於參觀日前一天中午12點前完成。</p>
+              <p>如您的訂單有任何問題，請洽服務專線 03-5631968。</p>
+            </div>
+            <div class="sideInfo">
+              <h4>相關資訊</h4>
+              <ul class="linksList">
+                <li><a href="visitInfo.html">參觀資訊</a></li>
+                <li><a href="directions.html">交通指南</a></li>
+                <li><a href="faq.html">常見問題</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <form id="reservationLoginForm" action="reservation_all.html" method="post">
+            <div id="bookForm">
+              <div class="reservationTitle">預約管理</div>
+              <div class="reservationContent">
+                <p>您的預約內容如下:</p>
+                <div id="bookedInfoBox">
+                  <div class="top">
+                    <div class="ticket"><span>預約代號：</span><span class="ticketNum">1610110001</span></div>
+                    <p>建議您提前15分鐘來館，以便完成報到手續。</p>
+                  </div>
+                  <div class="bottom">
+                    <ul>
+                      <li><span class="tLabel">預約日期：</span>2016/12/21</li>
+                      <li><span class="tLabel">參觀時段：</span>14:00/中文導覽</li>
+                      <li><span class="tLabel">預約類別：</span>團體</li>
+                      <li><span class="tLabel">參觀人數：</span>15人</li>
+                      <li><span class="tLabel">團體類型：</span>學校/教育機構</li>
+                      <li><span class="tLabel">團體名稱：</span>國立台灣大學</li>
+                    </ul>
+                  </div>
+                  <div class="bottom">
+                    <p>預約聯絡人</p>
+                    <ul>
+                      <li><span class="tLabel">姓名：</span>林小琪</li>
+                      <li><span class="tLabel">行動電話：</span>0933123456</li>
+                      <li><span class="tLabel">E-mail：</span>pamela@gmail.com</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <a id="backToListBtn" href="reservation_all.html" type="button" class="btn btn-lg btn-primary">回上頁</a>
+                </div>
+              </div>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- 主內容框架-END -->
+    </div>
+
+    <div id="tsmc_breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="/">首頁</a></li>
+          <li class="active">預約查詢</li>
+        </ol>
+      </div>
+    </div>
+    <footer>
+      <div id="tsmc_shareBar" class="hidden-print">
+          <div class="container">
+            <div class="logo"><img alt="台積創新館 - TSMC Museum of Innovation" src="img/tsmc_musium_logo_footer.png" srcset="img/tsmc_musium_logo_footer@2x.png 2x"></div>
+            <div class="shareBtns">
+              <ul>
+                <li class="text">分享至：</li>
+                <li><a title="分享至Facebook" href="#"><img src="img/shareBtn_fb.png"></a></li>
+                <li><a title="分享至Twitter" href="#"><img src="img/shareBtn_twitter.png"></a></li>
+                <li><a title="分享至LinkedIn" href="#"><img src="img/shareBtn_linkedIn.png"></a></li>
+              </ul>
+            </div>
+          </div>
+      </div>
+      <div id="tsmc_footerInfo">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-5 col-sm-12">
+                <div class="group visitInfo">
+                  <div class="groupTitle">參觀資訊</div>
+                  <div class="row">
+                    <div class="infoItem col-md-12 col-sm-6 col-xs-12 withLabel">
+                      <span class="openL">開館時間：</span><span class="dayL">週一~週五</span>09:00~17:00<br>
+                      <span class="dayL">週六</span>10:00~17:00
+                    </div>
+                    <div class="infoItem col-md-12 col-sm-6 col-xs-12 withLabel">
+                      <span class="openL">休館時間：</span>週日、國定假日及館方公告之必要休館日
+                    </div>
+                    <div class="infoItem col-md-12 col-sm-6 col-xs-12">新竹科學園區力行七路1號</div>
+                    <div class="infoItem col-md-12 col-sm-6 col-xs-12 withLabel">
+                      <span class="openL">服務專線：</span>03-5631968
+                    </div>
+                    <div class="infoItem col-md-12 col-sm-6 col-xs-12"><a class="mail" href="mailto:service@tsmcmoi.com">service@tsmcmoi.com</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-sm-5 hidden-print">
+                <div class="group">
+                  <div class="groupTitle">關於台積創新館</div>
+                  <ul class="groupList">
+                    <li><a href="about.html">台積創新館簡介</a></li>
+                    <li><a href="exhibitionInfo.html">展區概覽</a></li>
+                    <li><a href="contact.html">聯絡我們</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-2 col-sm-5 hidden-print">
+                <div class="group">
+                  <div class="groupTitle">參觀台積創新館</div>
+                  <ul class="groupList">
+                    <li><a href="bookOnline_pickDate.html">線上預約參觀</a></li>
+                    <li><a href="reservation_login.html">預約查詢</a></li>
+                    <li><a href="visitInfo.html">參觀資訊</a></li>
+                    <li><a href="directions.html">交通指南</a></li>
+                    <li><a href="faq.html">常見問題</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-2 col-sm-2 hidden-print">
+                <div class="group">
+                  <div class="groupTitle">最新消息</div>
+                  <ul class="groupList">
+                    <li><a href="news.html">最新消息</a></li>
+                  </ul>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+      </div>
+      <div id="tsmc_copyright" class="hidden-print">
+          <div class="container">
+            <span>Copyright© 2010-2016 台灣積體電路製造股份有限公司 著作權所有</span><a onclick="popupCenter('legalNotice.html', '注意事項暨隱私權聲明',450,450);" href="javascript:void(0);">法律與商標</a><a onclick="popupCenter('privacyPolicy.html', '隱私權保護聲明',450,450);" href="javascript:void(0);">隱私權保護聲明</a>
+          </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/datepicker-zh-TW.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/global.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+      });
+    </script>
+  </body>
+</html>

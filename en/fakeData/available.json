@@ -1,0 +1,26 @@
+{
+	"availableTime": {
+		"date": "2016/11/21",
+		"item": [{
+			"time": "9:00",
+			"spaceLeft": "6",
+			"guide": "0"
+		}, {
+			"time": "10:00",
+			"spaceLeft": "5",
+			"guide": "1"
+		}, {
+			"time": "11:00",
+			"spaceLeft": "1",
+			"guide": "1"
+		}, {
+			"time": "12:00",
+			"spaceLeft": "11",
+			"guide": "2"
+		}, {
+			"time": "13:30",
+			"spaceLeft": "6",
+			"guide": "0"
+		}]
+	}
+}
