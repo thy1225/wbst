@@ -69,7 +69,7 @@
         <div class="row">
           <div class="col-md-4">
             <div class="sideInfo">
-              <h1>Online Reservation</h1>
+              <h1>Advanced Search</h1>
               <p>Reservations can be made for all opening hours one month in advance beginning on the first day of the month to the day before the reservation date. Same-day reservations will not be accepted.</p>
               <p>To protect the rights of other visitors, each person may only make one reservation per month.</p>
             </div>
@@ -77,8 +77,6 @@
               <div class="alert tsmc-alert pink"><span class="icon"><img src="img/icon_sideInfo_school_24x24@2x.png"></span>For school groups with more than 15 people, please fill out the  <a href="bookOnline_special.html">School Group Tour Reservation Form</a>.
               </div>
               <div class="alert tsmc-alert"><span class="icon"><img src="img/icon_sideInfo_group_24x24@2x.png"></span>For other groups with more than 15 people, please fill out the <a href="bookOnline_special.html">Large Group Tour Reservation Form</a>.
-              </div>
-              <div class="alert tsmc-alert"><span class="icon"><img src="img/icon_sideInfo_adSearch_24x24@2x.png"></span><a href="advancedSearch.html">Advanced search</a> for available reservation times.
               </div>
             </div>
           </div>
@@ -88,28 +86,90 @@
               <li><div class="progressItem"><span class="icon"><img src="img/icon_bookProgress2.png"></span>Fill in number of visitors</div></li>
               <li><div class="progressItem"><span class="icon"><img src="img/icon_bookProgress3.png"></span>Complete reservation</div></li>
             </ul>
-            <ul class="calendarColorScheme">
-              <li><span></span>Available</li>
-              <li><span></span>Closed day / Not available</li>
-              <li><span></span>Full</li>
-            </ul>
-            <div id="bookDatePicker">
-              <div id="datepickerBox"></div>
-            </div>
-            <div id="bookTimePicker" style="display:none;">
-              <p>Please choose the time of admission on <span class="selectedDate red"></span>:</p>
-              <ul id="timeList">
-                <!--display time list-->
-              </ul>
-            </div>
-            <div id="bookControlBar" style="display:none;">
-              <form id="form_book_pickDate" action="bookOnline_form.html" method="get">
-                <input id="book_date" name="book_date" type="hidden">
-                <input id="book_time" name="book_time" type="hidden">
-                <button id="book_submit" type="button" class="btn btn-lg btn-primary">Next</button>
-              </form>
-            </div>
-          </div>
+            <form id="advancedSearchForm" method="get">
+              <div id="bookForm">
+                <div id="advancedSearchBox" class="visitorInfo">
+                  <div class="titleBtn"><span class="icon_expand"></span>Advanced Search</div>
+                  <div id="searchToggleArea" class="row">
+                    <div class="col-lg-12">
+                      <div class="form-group input_dateStartAndEnd">
+                        <label for="sDate_start">Date</label>
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <input type="text" id="sDate_start" name="sDate_start" class="form-control datepickerInput" value="" placeholder="From" required>
+                          </div>
+                          <div class="till">~</div>
+                          <div class="col-sm-6">
+                            <input type="text" id="sDate_end" name="sDate_end" class="form-control datepickerInput" value="" placeholder="To" required>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="sTime_select">Time</label>
+                        <select id="sTime_select" name="sTime_select" class="form-control">
+                          <option value="all">All</option>
+                          <option value="am">AM</option>
+                          <option value="pm">PM</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="clearfix visible-sm-block visible-md-block visible-lg-block"></div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="sGuide_select">Guide</label>
+                        <select id="sGuide_select" name="sGuide_select" class="form-control">
+                          <option value="0">All</option>
+                          <option value="1">Chinese Guide</option>
+                          <option value="2">English Guide</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="sVisitors_select">Number of visitors <small>(1~15)</small></label>
+                        <select id="sVisitors_select" name="sVisitors_select" class="form-control">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <button id="searchBtn" type="button" class="btn btn-lg btn-primary">Search</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <form id="bookingForm" action="bookOnline_form.html" method="get">
+              <div id="allAvalibleTime" style="display:none;">
+                <div class="title">Please choose the time of admission:</div>
+                <div class="appendBox">
+                  <!-- 插入時間選項 -->
+                </div>
+                <div id="bookControlBar">
+                  <input id="book_visitors" name="book_visitors" type="hidden" value="1">
+                  <input id="book_date" name="book_date" type="hidden">
+                  <input id="book_time" name="book_time" type="hidden">
+                  <button id="book_submit" type="button" class="btn btn-lg btn-primary">Next</button>
+                </div>
+              </div>
+            </form>
         </div>
       </div>
       <!-- 主內容框架-END -->
@@ -119,7 +179,7 @@
       <div class="container">
         <ol class="breadcrumb">
           <li><a href="/">Home</a></li>
-          <li class="active">Online Reservation</li>
+          <li class="active">Advanced Search</li>
         </ol>
       </div>
     </div>
@@ -188,6 +248,7 @@
                     <li><a href="news.html">Latest News</a></li>
                   </ul>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -203,6 +264,7 @@
     <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script src="js/global.js"></script>
@@ -210,120 +272,159 @@
       var today;
       var tomorrow;
       var lastDayBooking;
+      var allAvalibleTimeObj = [];
+      var searchBtnTxt = "";
       $(document).ready(function(){
         $.ajax({
-          url: "fakeData/calendarStatus.json",
+          url: "fakeData/getToday.json",
           type: "GET",
           dataType: "json",
           success: function(Jdata) {
-            today = new Date(Jdata.calendarRecord.today);
+            today = new Date(Jdata.today.date);
             tomorrow = new Date(today.getFullYear(), today.getMonth(), today.getDate()+1);
             lastDayBooking = new Date(today.getFullYear(), today.getMonth()+2, 0);
-            createCalendar(Jdata.calendarRecord);
+            activateDatepicker();
           },
           error: function() {
             alert("JSON LOAD ERROR!!!1");
           }
         });
 
-        function checkForValue(json, dateValue) {
-            for (key in json.item) {
-                if (json.item[key].date === dateValue) {
-                    if(json.item[key].status == 0){
-                      return [false,""];
-                    }else{
-                      return [false,"fullBooked"];
-                    }
-                }
-            }
-            return [true,""];
+        function activateDatepicker(){
+          $(".datepickerInput").datepicker("destroy");
+          $(".datepickerInput").datepicker({
+                showAnim: "fadeIn",
+                firstDay: 1,
+                minDate: tomorrow,
+                maxDate: lastDayBooking,
+                defaultDate: tomorrow,
+                dateFormat: "yy/mm/dd"
+              });
         }
 
-        function createCalendar(calendarData){
-          $("#datepickerBox").datepicker({
-              firstDay: 1,
-              numberOfMonths: 2,
-              minDate: today,
-              maxDate: lastDayBooking,
-              defaultDate: tomorrow,
-              dateFormat: "yy/mm/dd",
-              beforeShowDay: function(t){
-                  return checkForValue(calendarData, getFormattedDate(t));
-                },
-              onSelect: function(){
-                  getAvalibleTime($(this).val());
-                }
+        $.validator.addMethod('email_tsmc', function (value) {
+                return /^[^\s]+@[^\s]+\.[^\s]{2,4}$/.test(value);
             });
-        }
+        $("#advancedSearchForm").validate({
+          rules: {
+                  sDate_start: "required",
+                  sDate_end: "required"
+                  },
+          messages:{
+                  sDate_start: "Please select a date.",
+                  sDate_end: "Please select a date."
+                  },
+        submitHandler: function(form) {
+                  $("#book_visitors").val($("#sVisitors_select").val());
+                  searchBtnTxt = $("#searchBtn").text();
+                  $("#searchBtn").html("Sending…");
+                  getAllAvaliableTime();
+                  //form.submit();
+                  }
+          });
+
+        $("#searchBtn").click(function(){
+          $("#allAvalibleTime").hide();
+          $("#allAvalibleTime .appendBox").html("");
+          $("#advancedSearchForm").submit();
+          return false;
+          });
 
         $("#book_submit").click(function(){
-          if($("#book_date").val()==""){
-            showAlert("#bookControlBar","alert_sel_book","danger","Please choose the date of admission.");
+          if($("#book_visitors").val()==""){
+            showAlert("#bookControlBar","alert_sel_visitors","danger","Please select the number of visitors.");
             return;
           }
           if($("#book_time").val()==""){
             showAlert("#bookControlBar","alert_sel_time","danger","Please choose the time of admission.");
             return;
           }
-          $("#form_book_pickDate").submit();
+          $("#bookingForm").submit();
         });
-      });
 
-      function getAvalibleTime(checkDate){
-        $("#bookTimePicker").hide();
-        $("#book_date").val(checkDate);
-        $("#book_time").val("");
-        $(".selectedDate").html(checkDate);
-        $("#bookTimePicker").fadeIn();
-        $("#bookControlBar").fadeIn();
+        function getAllAvaliableTime(){
+          $("#book_date").val("");
+          $("#book_time").val("");
 
-        if($(window).width()<768){
-          $("body, html").animate({scrollTop:$("#bookTimePicker").offset().top-100+"px"},600,function(){});
+          $.ajax({
+            url: "fakeData/allAvalibleTime.json",
+            type: "GET",
+            dataType: "json",
+            success: function(Jdata) {
+              $("#searchBtn").html(searchBtnTxt);
+              allAvalibleTimeObj = Jdata.allAvailableTime;
+              createTimePicker(allAvalibleTimeObj);
+            },
+            error: function() {
+              alert("JSON LOAD ERROR!!!1");
+            }
+          });
         }
 
-        $.ajax({
-          url: "fakeData/available.json",
-          type: "GET",
-          dataType: "json",
-          success: function(Jdata) {
-            var itemData = Jdata.availableTime.item;
-            var items = [];
-            $.each( itemData, function(i) {
-              items.push( "<li class='timeItem' data-time='"+i+"'><div class='time'>"+itemData[i].time+"</div><div class='info'><span class='spaceLeft'>"+itemData[i].spaceLeft+"</span> people / <span class='guide'>"+getGuideString(itemData[i].guide)+"</span></div></li>" );
-            });
-            $("#timeList .timeItem").fadeOut();
-            $("#timeList").html(items.join(""));
-            reactivateTimeBtn();
-          },
-          
-          error: function() {
-            alert("JSON LOAD ERROR!!!2");
+        function createTimePicker(json){
+          if(json.length == 0){
+            noAvalibleTime();
+            return;
           }
-        });
-      }
 
-      function reactivateTimeBtn(){
-        $("#timeList .timeItem").click(function(){
-          $("#timeList .timeItem").removeClass("active");
-          $(this).addClass("active");
-          $("#alert_sel_time").fadeOut(function(){$(this).remove();});
-
-          $("#book_time").val($(this).attr("data-time"));
-        });
-      }
-
-      function getGuideString(guideType){
-        switch(Number(guideType)){
-          case 0:
-            return "No Guide";
-          case 1:
-            return "English Guide";
-          case 2:
-            return "Chinese Guide";
-          default:
-            return "";
+          $("#allAvalibleTime .appendBox").html("");
+          for(key in json){
+            var timeGroupStr = '<div class="timePickerGroup"><p><span class="selectedDate red">'+json[key].date+'</span>：</p><ul id="timeList">';
+            for(item in json[key].item){
+              timeGroupStr += "<li class='timeItem' data-time='"+json[key].item[item].time+"' data-date='"+json[key].date+"'><div class='mainInfo'><span class='time'>"+json[key].item[item].time+"</span> / <span class='guide'>"+getGuideString(json[key].item[item].guide)+"</span></div><div class='info'><span class='spaceLeft'>"+json[key].item[item].spaceLeft+"</span> people</div></li>";
+            }
+            timeGroupStr += "</ul></div>";
+            $("#allAvalibleTime .appendBox").append(timeGroupStr);
+            reactivateTimeBtn();
+          }
+          $("#advancedSearchBox .row").slideToggle(function(){
+            if($(this).height()==0){
+              $("#advancedSearchBox").addClass("minify");
+            }else{
+              $("#advancedSearchBox").removeClass("minify");
+            }
+            $("#allAvalibleTime").fadeIn("slow");
+          });
         }
-      }
+
+        function noAvalibleTime(){
+          alert("很抱歉，此段期間沒有可預約的時間。");
+        }
+
+        function reactivateTimeBtn(){
+          $("#timeList .timeItem").click(function(){
+            $("#timeList .timeItem").removeClass("active");
+            $(this).addClass("active");
+            $("#alert_sel_time").fadeOut(function(){$(this).remove();});
+
+            $("#book_date").val($(this).attr("data-date"));
+            $("#book_time").val($(this).attr("data-time"));
+          });
+        }
+
+        $("#advancedSearchBox .titleBtn").click(function(){
+          $("#advancedSearchBox .row").slideToggle(function(){
+            if($(this).height()==0){
+              $("#advancedSearchBox").addClass("minify");
+            }else{
+              $("#advancedSearchBox").removeClass("minify");
+            }
+          });
+        });
+
+        function getGuideString(guideType){
+          switch(Number(guideType)){
+            case 0:
+              return "No Guide";
+            case 1:
+              return "English Guide";
+            case 2:
+              return "Chinese Guide";
+            default:
+              return "";
+          }
+        }
+      });
 
     </script>
   </body>

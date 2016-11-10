@@ -1375,29 +1375,14 @@ body.popOutPage {
 .calendarColorScheme {
   padding: 0;
   margin: 0;
-  text-align: left;
 }
 .calendarColorScheme > li {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-.calendarColorScheme:before,
-.calendarColorScheme:after {
-  content: " ";
-  display: table;
-}
-.calendarColorScheme:after {
-  clear: both;
-}
-@media (min-width: 400px) and (max-width: 767px) {
-  .calendarColorScheme {
-    text-align: center;
-  }
-}
 .calendarColorScheme > li {
-  display: inline-block;
-  margin: 0 20px 5px 2px;
+  margin-bottom: 6px;
 }
 .calendarColorScheme > li > span {
   display: inline-block;
@@ -1783,6 +1768,7 @@ body.popOutPage {
   cursor: pointer;
   display: inline-block;
   margin: 0 1% 10px;
+  font-size: 16px;
 }
 @media (max-width: 767px) {
   #bookTimePicker #timeList > li,
@@ -1803,10 +1789,6 @@ body.popOutPage {
 #bookTimePicker #timeList > li.active,
 .timePickerGroup #timeList > li.active {
   background: #e50000;
-}
-#bookTimePicker #timeList > li div.mainInfo,
-.timePickerGroup #timeList > li div.mainInfo {
-  font-size: 18px;
 }
 #bookControlBar {
   margin: -40px 0 50px;
@@ -2084,6 +2066,9 @@ body.popOutPage {
 }
 #bookForm .bookCompleteGreet .title {
   color: black;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
 }
 #bookForm .bookedInfo {
   background: #f2f2f2;
@@ -2138,6 +2123,8 @@ body.popOutPage {
   border-bottom: 1px solid #cccccc;
   padding: 16px 20px;
   background: #e6e6e6;
+  position: relative;
+  z-index: 1;
 }
 @media print {
   #bookedInfoBox .top {
@@ -2157,13 +2144,14 @@ body.popOutPage {
   width: 50%;
   padding: 20px 20px;
   float: left;
-  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
   color: #666666;
 }
 @media (max-width: 767px) {
   #bookedInfoBox .bottom {
     width: 100%;
     border: 0;
+    margin-right: 0;
   }
 }
 @media print {
@@ -2171,8 +2159,10 @@ body.popOutPage {
     padding: 10px 20px;
   }
 }
-#bookedInfoBox .bottom:last-child {
+#bookedInfoBox .bottom:nth-child(2) {
   border: none;
+  border-right: 1px solid #cccccc;
+  margin-right: -1px;
 }
 #bookedInfoBox .bottom ul {
   padding: 0;
@@ -2188,6 +2178,19 @@ body.popOutPage {
   position: relative;
   color: black;
   margin-bottom: 10px;
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 @media print {
   #bookedInfoBox .bottom ul li {
