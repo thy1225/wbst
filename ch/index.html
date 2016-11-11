@@ -64,9 +64,9 @@
     </nav>
     <div id="headerBanner" class="headerBanner">
       <div class="textContent">
-        <h1>Journey through the Decades of Innovation</h1>
-        <h4>Discover the people and technology that changed our world.</h4>
-        <a class="btn btn-lg btn-tsmcRed">Discover the Museum</a>
+        <div class="tabelCell">
+          <h1 id="kenburnsTitle"></h1>
+        </div>
       </div>
       <div id="bannerSlideBox">
         <div id="kenburns-slideshow"></div>
@@ -83,8 +83,8 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="pageIntroText text-center">
-              <h2>創新的起點通常源自於一個想法，卻可能為數十億人類的生活帶來超越想像的改變！</h2>
-              <p>歡迎蒞臨台積創新館，探索台積公司及其創新的商業模式如何加速釋放積體電路設計及產品應用創新，使得積體電路無所不在，進而大幅改變了現代人的生活！</p>
+              <h2>創新的起點通常源自於一個想法，卻可能為<br>數十億人類的生活帶來超越想像的改變！</h2>
+              <p>歡迎蒞臨台積創新館，探索台積公司及其創新的商業模式如何加速釋放積體電路設計及產品應用創新，<br>使得積體電路無所不在，進而大幅改變了現代人的生活！</p>
             </div>
           </div>
           <div class="col-xs-12">
@@ -125,9 +125,10 @@
                 <img src="img/banner/indexBanner_visitMuseum.jpg">
                 <div class="textContent">
                   <h3>參觀資訊</h3>
-                  <p>TSMC Museum of Innovation shows how semiconductors enrich people's lives.</p>
                   <h5>開館時間：</h5>
                   <p>週一~週五：09:00~17:00<br>週六：10:00~17:00</p>
+                  <h5>休館時間：</h5>
+                  <p>週日、國定假日及館方公告之必要休館日</p>
                   <h5>連絡資訊</h5>
                   <p>新竹科學園區力行七路1號<br>
                   服務專線：03-5631968<br>
@@ -291,6 +292,14 @@
     <script type="text/javascript">
     var swipers = {};
 
+    var headerTitles = ["創新無所不在",
+                        "加速積體電路創新",
+                        "積體電路持續創新",
+                        "科技創新 無限可能",
+                        "創新是一切進步的關鍵",
+                        "加速創新 綻放無限精彩",
+                        "改變世界的創新商業模式"];
+
   $(document).ready(function() {
       $('#kenburns-slideshow').Kenburns({
         images: [
@@ -298,10 +307,18 @@
           "img/banner/indexBanner_pic2.jpg",
           "img/banner/indexBanner_pic3.jpg"
         ],
-        scale:1,
+        scale:0.9,
         duration:8000,
         fadeSpeed:1200,
         ease3d:'cubic-bezier(0.445, 0.050, 0.550, 0.950)',
+        onSlideComplete: function(k){
+          var kObj = this;
+          //$('#kenburnsTitle').html(headerTitles[this.getSlideIndex()]);
+          $('#headerBanner .textContent').fadeOut(1000,function(){
+            $("#kenburnsTitle").html(headerTitles[kObj.getSlideIndex()]);
+            $(this).fadeIn(1000);
+          });
+        },
         onLoadingComplete: function(){
           //$('#status').html("Loading Complete");
         }

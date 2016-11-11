@@ -318,8 +318,8 @@
         $(image).css({'-moz-transition':'-moz-transform '+(that.options.duration+that.options.fadeSpeed)+'ms '+that.options.ease3d});
 
         //set the end position and scale, which fires the transition
-        $(image).css({'-webkit-transform':'scale(1.05) translate3d('+position.endX+'px,'+position.endY+'px,0)'});
-        $(image).css({'-moz-transform':'scale(1.05) translate3d('+position.endX+'px,'+position.endY+'px,0)'});
+        $(image).css({'-webkit-transform':'scale(1) translate3d('+position.endX+'px,'+position.endY+'px,0)'});
+        $(image).css({'-moz-transform':'scale(1) translate3d('+position.endX+'px,'+position.endY+'px,0)'});
 
         this.transitionOut();
         this.options.onSlideComplete();

@@ -21,27 +21,39 @@
 .headerBanner .textContent {
   position: absolute;
   top: 0;
-  padding-top: 150px;
   text-align: center;
   width: 700px;
   left: 50%;
   margin-left: -350px;
   z-index: 101;
+  height: 400px;
+  display: table;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .headerBanner .textContent {
-    padding-top: 120px;
     width: 700px;
+    height: 400px;
     max-width: 95%;
     margin-left: -350px;
   }
 }
 @media (max-width: 991px) {
   .headerBanner .textContent {
-    padding-top: 60px;
     width: 340px;
+    height: 300px;
     max-width: 95%;
     margin-left: -170px;
+  }
+}
+.headerBanner .textContent .tabelCell {
+  display: table-cell;
+  vertical-align: middle;
+  height: 400px;
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .headerBanner .textContent .tabelCell {
+    height: 300px;
   }
 }
 .headerBanner .textContent h1 {
@@ -49,7 +61,7 @@
   -webkit-text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
   color: white;
-  margin-bottom: 20px;
+  margin: 0;
 }
 @media (max-width: 991px) {
   .headerBanner .textContent h1 {
@@ -74,12 +86,15 @@
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .headerBanner.contentPage .textContent {
-    padding-top: 100px;
+    padding-top: 110px;
   }
 }
 @media (max-width: 991px) {
   .headerBanner.contentPage .textContent {
-    padding-top: 80px;
+    padding-top: 100px;
+    width: 100%;
+    left: 0;
+    margin-left: 0;
   }
 }
 .headerBanner.contentPage #kenburns-slideshow {
@@ -111,7 +126,7 @@
 .headerBanner #kenburns-slideshow {
   position: relative;
   width: 1920px;
-  height: 660px;
+  height: 400px;
   left: 50%;
   margin-left: -960px;
   background-color: #292929;
@@ -120,16 +135,16 @@
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .headerBanner #kenburns-slideshow {
-    width: 1512.72727273px;
-    height: 520px;
-    margin-left: -756.36363636px;
+    width: 1920px;
+    height: 400px;
+    margin-left: -960px;
   }
 }
 @media (max-width: 991px) {
   .headerBanner #kenburns-slideshow {
-    width: 1192.72727273px;
-    height: 410px;
-    margin-left: -596.36363636px;
+    width: 1440px;
+    height: 300px;
+    margin-left: -720px;
   }
 }
 .headerBanner .kb-slide {
@@ -147,8 +162,8 @@
 .headerBanner .loader {
   width: 32px;
   height: 32px;
-  top: 6px;
-  left: 550px;
+  top: 42%;
+  left: 50%;
   border: 5px solid rgba(128, 128, 128, 0.9);
   opacity: .9;
   border-top: 5px solid rgba(0, 0, 0, 0);
@@ -1178,11 +1193,6 @@ body.popOutPage {
   display: inline-block;
   min-width: 85px;
 }
-@media (min-width: 768px) and (max-width: 991px) {
-  #tsmc_footerInfo .group.visitInfo .infoItem {
-    white-space: nowrap;
-  }
-}
 #tsmc_copyright {
   background: #191919;
   color: #666666;
@@ -1234,8 +1244,21 @@ body.popOutPage {
   margin-right: 50px;
 }
 #mainContentBox .pageIntroText {
-  max-width: 850px;
   margin: 0 auto 40px;
+}
+#mainContentBox .pageIntroText h2 {
+  font-size: 40px;
+  line-height: 52px;
+}
+#mainContentBox .pageIntroText p {
+  font-size: 18px;
+  line-height: 25px;
+  color: #808080;
+}
+@media (max-width: 991px) {
+  #mainContentBox .pageIntroText br {
+    display: none;
+  }
 }
 #mainContentBox .contentPage {
   margin-bottom: 40px;
@@ -1375,14 +1398,29 @@ body.popOutPage {
 .calendarColorScheme {
   padding: 0;
   margin: 0;
+  text-align: left;
 }
 .calendarColorScheme > li {
   padding: 0;
   margin: 0;
   list-style: none;
 }
+.calendarColorScheme:before,
+.calendarColorScheme:after {
+  content: " ";
+  display: table;
+}
+.calendarColorScheme:after {
+  clear: both;
+}
+@media (min-width: 400px) and (max-width: 767px) {
+  .calendarColorScheme {
+    text-align: center;
+  }
+}
 .calendarColorScheme > li {
-  margin-bottom: 6px;
+  display: inline-block;
+  margin: 0 20px 5px 2px;
 }
 .calendarColorScheme > li > span {
   display: inline-block;
@@ -2123,8 +2161,6 @@ body.popOutPage {
   border-bottom: 1px solid #cccccc;
   padding: 16px 20px;
   background: #e6e6e6;
-  position: relative;
-  z-index: 1;
 }
 @media print {
   #bookedInfoBox .top {
@@ -2293,7 +2329,7 @@ body.popOutPage {
     padding-left: 0;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   #allReservationBox li.header .group > div.ticketID > span {
     display: none;
   }
@@ -2569,6 +2605,7 @@ body.popOutPage {
 @media (max-width: 991px) {
   #galleryIntro .swiper-container {
     width: 991px;
+    height: 400px;
     position: relative;
     left: 50%;
     margin-left: -495.5px;
@@ -2602,7 +2639,6 @@ body.popOutPage {
     top: 0;
     z-index: 5;
     width: 1010px;
-    height: 425px;
   }
 }
 @media (max-width: 991px) {
@@ -2614,7 +2650,7 @@ body.popOutPage {
   z-index: 6;
 }
 #galleryIntro .galleryBox .textContent {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   position: absolute;
   z-index: 2;
   right: 0;
@@ -2717,7 +2753,7 @@ body.popOutPage {
 }
 #galleryIntro .visitMuseum .textContent h5 {
   color: white;
-  font-weight: 500;
+  font-weight: 600;
   -webkit-text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
   text-transform: uppercase;

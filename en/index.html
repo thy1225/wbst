@@ -64,9 +64,9 @@
     </nav>
     <div id="headerBanner" class="headerBanner">
       <div class="textContent">
-        <h1>Journey through the Decades of Innovation</h1>
-        <h4>Discover the people and technology that changed our world.</h4>
-        <a class="btn btn-lg btn-tsmcRed">Discover the Museum</a>
+        <div class="tabelCell">
+          <h1 id="kenburnsTitle"></h1>
+        </div>
       </div>
       <div id="bannerSlideBox">
         <div id="kenburns-slideshow"></div>
@@ -83,8 +83,8 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="pageIntroText text-center">
-              <h2>Innovation often originates as a single idea; yet it has the potential to unimaginably transform the lives of billions of people!</h2>
-              <p>Welcome to the TSMC Museum of Innovation. Here we explore how TSMC and its innovative business model accelerate innovation in integrated circuit (IC) design and product applications. These innovations have made ICs become ubiquitous and have significantly improved our lives.</p>
+              <h2>Innovation often originates as a single idea; yet it <br>has the potential to unimaginably transform the lives <br>of billions of people!</h2>
+              <p>Welcome to the TSMC Museum of Innovation. Here we explore how TSMC and its innovative business <br>model accelerate innovation in integrated circuit (IC) design and product applications. These innovations <br>have made ICs become ubiquitous and have significantly improved our lives.</p>
             </div>
           </div>
           <div class="col-xs-12">
@@ -125,12 +125,13 @@
                 <img src="img/banner/indexBanner_visitMuseum.jpg">
                 <div class="textContent">
                   <h3>Visit the Museum</h3>
-                  <p>TSMC Museum of Innovation shows how semiconductors enrich people's lives.</p>
-                  <h5>Hours</h5>
-                  <p>Monday–Friday, 9:00 a.m.–5:00 p.m.<br>Saturday : 10 a.m. ~ 4 p.m.</p>
+                  <h5>Opening Hours</h5>
+                  <p>Monday–Friday, 9:00 a.m.–5:00 p.m.<br>Saturday: 10 a.m. ~ 4 p.m.</p>
+                  <h5>Closed</h5>
+                  <p>Sundays, National holidays, and other necessary closing days that will be officially </p>
                   <h5>Contact</h5>
                   <p>25, Li-Hsin Rd. 6, Hsinchu Science Park, <br>Hsinchu 300-78, Taiwan, R.O.C.<br>
-                  +886-3-5636688<br>
+                  Phone: +886-3-5631968<br>
                   E-mail: <a href="mailto:service@tsmcmoi.com">service@tsmcmoi.com</a></p>
                 </div>
               </div>
@@ -290,6 +291,14 @@
     <script type="text/javascript">
     var swipers = {};
 
+    var headerTitles = ["A World of Innovation",
+                        "Accelerate Integrated Circuit Innovation",
+                        "Continued Innovation of Integrated Circuits",
+                        "Technology Innovation beyond Imagination",
+                        "Innovation is Key to All Progress",
+                        "Accelerate Innovation to Move Brilliance Forward",
+                        "World-changing Innovative Business Model"];
+
   $(document).ready(function() {
       $('#kenburns-slideshow').Kenburns({
         images: [
@@ -297,10 +306,18 @@
           "img/banner/indexBanner_pic2.jpg",
           "img/banner/indexBanner_pic3.jpg"
         ],
-        scale:1,
+        scale:0.9,
         duration:8000,
         fadeSpeed:1200,
         ease3d:'cubic-bezier(0.445, 0.050, 0.550, 0.950)',
+        onSlideComplete: function(k){
+          var kObj = this;
+          //$('#kenburnsTitle').html(headerTitles[this.getSlideIndex()]);
+          $('#kenburnsTitle').fadeOut(1000,function(){
+            $(this).html(headerTitles[kObj.getSlideIndex()]);
+            $(this).fadeIn(1000);
+          });
+        },
         onLoadingComplete: function(){
           //$('#status').html("Loading Complete");
         }

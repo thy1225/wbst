@@ -21,27 +21,39 @@
 .headerBanner .textContent {
   position: absolute;
   top: 0;
-  padding-top: 150px;
   text-align: center;
   width: 700px;
   left: 50%;
   margin-left: -350px;
   z-index: 101;
+  height: 400px;
+  display: table;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .headerBanner .textContent {
-    padding-top: 120px;
     width: 700px;
+    height: 400px;
     max-width: 95%;
     margin-left: -350px;
   }
 }
 @media (max-width: 991px) {
   .headerBanner .textContent {
-    padding-top: 60px;
     width: 340px;
+    height: 300px;
     max-width: 95%;
     margin-left: -170px;
+  }
+}
+.headerBanner .textContent .tabelCell {
+  display: table-cell;
+  vertical-align: middle;
+  height: 400px;
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .headerBanner .textContent .tabelCell {
+    height: 300px;
   }
 }
 .headerBanner .textContent h1 {
@@ -49,7 +61,7 @@
   -webkit-text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
   color: white;
-  margin-bottom: 20px;
+  margin: 0;
 }
 @media (max-width: 991px) {
   .headerBanner .textContent h1 {
@@ -74,12 +86,15 @@
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .headerBanner.contentPage .textContent {
-    padding-top: 100px;
+    padding-top: 110px;
   }
 }
 @media (max-width: 991px) {
   .headerBanner.contentPage .textContent {
-    padding-top: 80px;
+    padding-top: 100px;
+    width: 100%;
+    left: 0;
+    margin-left: 0;
   }
 }
 .headerBanner.contentPage #kenburns-slideshow {
@@ -111,7 +126,7 @@
 .headerBanner #kenburns-slideshow {
   position: relative;
   width: 1920px;
-  height: 660px;
+  height: 400px;
   left: 50%;
   margin-left: -960px;
   background-color: #292929;
@@ -120,16 +135,16 @@
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .headerBanner #kenburns-slideshow {
-    width: 1512.72727273px;
-    height: 520px;
-    margin-left: -756.36363636px;
+    width: 1920px;
+    height: 400px;
+    margin-left: -960px;
   }
 }
 @media (max-width: 991px) {
   .headerBanner #kenburns-slideshow {
-    width: 1192.72727273px;
-    height: 410px;
-    margin-left: -596.36363636px;
+    width: 1440px;
+    height: 300px;
+    margin-left: -720px;
   }
 }
 .headerBanner .kb-slide {
@@ -147,8 +162,8 @@
 .headerBanner .loader {
   width: 32px;
   height: 32px;
-  top: 6px;
-  left: 550px;
+  top: 42%;
+  left: 50%;
   border: 5px solid rgba(128, 128, 128, 0.9);
   opacity: .9;
   border-top: 5px solid rgba(0, 0, 0, 0);
@@ -1172,12 +1187,11 @@ body.popOutPage {
   display: block;
   float: left;
   min-height: 24px;
-  padding-right: 4px;
 }
 #tsmc_footerInfo .group.visitInfo .infoItem.withLabel span.dayL,
 #tsmc_footerInfo .group.visitInfo .infoItem > a.withLabel span.dayL {
   display: inline-block;
-  min-width: 120px;
+  min-width: 85px;
 }
 #tsmc_copyright {
   background: #191919;
@@ -1198,7 +1212,7 @@ body.popOutPage {
   }
 }
 #mainContentBox {
-  margin-top: 30px;
+  margin-top: 20px;
   min-height: 400px;
 }
 @media (max-width: 991px) {
@@ -1230,8 +1244,21 @@ body.popOutPage {
   margin-right: 50px;
 }
 #mainContentBox .pageIntroText {
-  max-width: 850px;
-  margin: 0 auto 30px;
+  margin: 0 auto 40px;
+}
+#mainContentBox .pageIntroText h2 {
+  font-size: 40px;
+  line-height: 52px;
+}
+#mainContentBox .pageIntroText p {
+  font-size: 18px;
+  line-height: 25px;
+  color: #808080;
+}
+@media (max-width: 991px) {
+  #mainContentBox .pageIntroText br {
+    display: none;
+  }
 }
 #mainContentBox .contentPage {
   margin-bottom: 40px;
@@ -1512,7 +1539,7 @@ body.popOutPage {
   width: 49.5%;
   background: #f2f2f2;
   position: relative;
-  min-height: 380px;
+  min-height: 370px;
 }
 @media (max-width: 767px) {
   #bookDatePicker #datepickerBox .ui-datepicker-group {
@@ -1534,7 +1561,7 @@ body.popOutPage {
 }
 #bookDatePicker #datepickerBox .ui-datepicker-calendar {
   width: 90%;
-  margin: 0 auto 16px;
+  margin: 0 auto 5px;
 }
 #bookDatePicker #datepickerBox .ui-datepicker th,
 #bookDatePicker #datepickerBox.ui-datepicker th {
@@ -1635,7 +1662,7 @@ body.popOutPage {
   width: 49.5%;
   background: #f2f2f2;
   position: relative;
-  min-height: 380px;
+  min-height: 370px;
 }
 @media (max-width: 767px) {
   #ui-datepicker-div .ui-datepicker-group {
@@ -1657,7 +1684,7 @@ body.popOutPage {
 }
 #ui-datepicker-div .ui-datepicker-calendar {
   width: 90%;
-  margin: 0 auto 16px;
+  margin: 0 auto 5px;
 }
 #ui-datepicker-div .ui-datepicker th,
 #ui-datepicker-div.ui-datepicker th {
@@ -2578,6 +2605,7 @@ body.popOutPage {
 @media (max-width: 991px) {
   #galleryIntro .swiper-container {
     width: 991px;
+    height: 400px;
     position: relative;
     left: 50%;
     margin-left: -495.5px;
@@ -2611,7 +2639,6 @@ body.popOutPage {
     top: 0;
     z-index: 5;
     width: 1010px;
-    height: 425px;
   }
 }
 @media (max-width: 991px) {
@@ -2623,7 +2650,7 @@ body.popOutPage {
   z-index: 6;
 }
 #galleryIntro .galleryBox .textContent {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   position: absolute;
   z-index: 2;
   right: 0;
@@ -2726,7 +2753,7 @@ body.popOutPage {
 }
 #galleryIntro .visitMuseum .textContent h5 {
   color: white;
-  font-weight: 500;
+  font-weight: 600;
   -webkit-text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
@@ -3172,6 +3199,11 @@ select.form-control {
   display: table-cell;
   vertical-align: middle;
 }
+@media (max-width: 767px) {
+  #galleryOverview .galleryTextGroup {
+    padding: 20px 30px;
+  }
+}
 #galleryOverview .galleryTextGroup .subTitle {
   font-size: 20px;
   width: 100%;
@@ -3433,4 +3465,20 @@ input.datepickerInput {
 #allAvalibleTime .title {
   font-size: 16px;
   margin-bottom: 5px;
+}
+#mainContentBox .pageIntroText h2 {
+  font-size: 36px;
+  line-height: 42px;
+}
+#mainContentBox .pageIntroText p {
+  font-size: 18px;
+  line-height: 25px;
+}
+#tsmc_footerInfo .group.visitInfo .infoItem.withLabel span.openL,
+#tsmc_footerInfo .group.visitInfo .infoItem > a.withLabel span.openL {
+  padding-right: 4px;
+}
+#tsmc_footerInfo .group.visitInfo .infoItem.withLabel span.dayL,
+#tsmc_footerInfo .group.visitInfo .infoItem > a.withLabel span.dayL {
+  min-width: 120px;
 }
