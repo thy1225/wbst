@@ -370,8 +370,8 @@
           $("#allAvalibleTime .appendBox").html("");
           for(key in json){
             var timeGroupStr = '<div class="timePickerGroup"><p><span class="selectedDate red">'+json[key].date+'</span>：</p><ul id="timeList">';
-            for(item in json[key].item){
-              timeGroupStr += "<li class='timeItem' data-time='"+json[key].item[item].time+"' data-date='"+json[key].date+"'><div class='mainInfo'><span class='time'>"+json[key].item[item].time+"</span> / <span class='guide'>"+getGuideString(json[key].item[item].guide)+"</span></div><div class='info'><span class='spaceLeft'>"+json[key].item[item].spaceLeft+"</span> people</div></li>";
+            for(keyItem in json[key].item){
+              timeGroupStr += "<li class='timeItem' data-time='"+json[key].item[keyItem].time+"' data-date='"+json[key].date+"'><div class='mainInfo'><span class='time'>"+json[key].item[keyItem].time+"</span> / <span class='guide'>"+getGuideString(json[key].item[keyItem].guide)+"</span></div><div class='info'><span class='spaceLeft'>"+json[key].item[keyItem].spaceLeft+"</span> people</div></li>";
             }
             timeGroupStr += "</ul></div>";
             $("#allAvalibleTime .appendBox").append(timeGroupStr);
