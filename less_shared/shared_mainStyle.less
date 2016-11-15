@@ -1,9 +1,14 @@
+/* 20161115 */
+
 @import "../bootstrap-3.3.7-grunt/less/variables.less";
 @import "../bootstrap-3.3.7-grunt/less/mixins.less";
 @import "mixins.less";
 @import "headerBanner_kenburns.less";
 @import (less) "swiper.min.css";
 @import (less) "lightbox.min.css";
+
+//google font
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
 
 body {
 	@media (max-width: @screen-sm-max) {padding-top:60px;}
@@ -223,7 +228,7 @@ body {
 }
 
 #mainContentBox{
-	margin-top:20px;
+	margin-top:30px;
 	min-height:400px;
 	@media (max-width: @screen-sm-max) {margin-top:0;}
 
@@ -248,7 +253,7 @@ body {
 	}
 
 	.pageIntroText{
-		margin:0 auto 40px;
+		margin:10px auto 40px;
 
 		h2{
 			font-size:40px;
@@ -257,7 +262,7 @@ body {
 
 		p{
 			font-size:18px;
-			line-height:25px;
+			line-height:26px;
 			color:@tsmc-grey3;
 		}
 
@@ -270,7 +275,7 @@ body {
 	}
 
 	.contentPage{
-		margin-bottom: 40px;
+		margin-bottom: 100px;
 
 		.intro{
 			margin:0 auto 30px;
@@ -290,8 +295,6 @@ body {
 			}
 
 			section{
-				font-size:16px;
-				line-height:24px;
 				border-bottom:1px solid @tsmc-grey2;
 				padding-bottom:20px;
 				margin-bottom:10px;
@@ -526,7 +529,7 @@ body {
 		&:after{
 			content:"";
 			display:block;
-			background:url(../img/icon_bookProgress_arrow.png) no-repeat center center;
+			background:url(/img/icon_bookProgress_arrow.png) no-repeat center center;
 			width:12px;
 			height:19px;
 			position:absolute;
@@ -563,7 +566,7 @@ body {
 		width:49.5%;
 		background:@tsmc-grey0;
 		position: relative;
-		min-height:370px;
+		min-height:345px;
 
 
 		@media (max-width: @screen-xs-max) { width:100%; }
@@ -597,7 +600,7 @@ body {
 			border-right:1px solid @tsmc-grey0;
 			border-bottom:1px solid @tsmc-grey0;
 			font-weight: normal;
-			line-height:36px;
+			line-height:32px;
 			padding: .4em .2em;
 		}
 
@@ -611,8 +614,8 @@ body {
 				background:@tsmc-grey3;
 				color:white;
 				text-align:center;
-				line-height:36px;
-				font-size:16px;
+				line-height:32px;
+				font-size:15px;
 
 				&.ui-state-active, &.ui-state-active.ui-state-hover{
 					background:@tsmc-red;
@@ -643,10 +646,10 @@ body {
 
 
 		.ui-datepicker-next span{
-			background:url(../img/icon_calendar_arrow_right_12x20px.png) no-repeat center center;
+			background:url(/img/icon_calendar_arrow_right_12x20px.png) no-repeat center center;
 		}
 		.ui-datepicker-prev span{
-			background:url(../img/icon_calendar_arrow_left_12x20px.png) no-repeat center center;
+			background:url(/img/icon_calendar_arrow_left_12x20px.png) no-repeat center center;
 		}
 	}
 
@@ -704,7 +707,7 @@ body {
 			background:@tsmc-grey3;
 			width:31.2%;
 			color:white;
-			padding:5px 1%;
+			padding:5px 2px;
 			cursor: pointer;
 			display:inline-block;
 			margin:0 1% 10px;
@@ -729,7 +732,7 @@ body {
 }
 
 #bookControlBar{
-	margin:-40px 0 50px;
+	margin:-40px 0 100px;
 
 	.btn{
 		margin-right:8px;
@@ -930,7 +933,7 @@ body {
 							display:inline-block;
 							min-width:22px;
 							min-height:35px;
-							background:url(../img/icon_cancelButton22x22@2x.png) no-repeat center center;
+							background:url(/img/icon_cancelButton22x22@2x.png) no-repeat center center;
 							background-size:22px;
 
 							&:hover{
@@ -955,7 +958,7 @@ body {
 					border-bottom:2px solid @tsmc-grey1;
 
 					input{
-						background:white url("../img/icon_calendar_20x20px@2x.png") no-repeat left center;
+						background:white url(/img/icon_calendar_20x20px@2x.png) no-repeat left center;
 						background-size:30px;
 						padding-left:40px;
 					}
@@ -1256,7 +1259,7 @@ body {
 				a.deleteLink{
 					width:100%;
 					min-height:22px;
-					background:url(../img/icon_cancelButton22x22@2x.png) no-repeat left center;
+					background:url(/img/icon_cancelButton22x22@2x.png) no-repeat left center;
 					background-size:22px;
 					display:block;
 
@@ -1323,13 +1326,13 @@ body {
 	  	}
 
 		&#page_prev{
-			background:@tsmc-grey2 url(../img/icon_pagination_left_10x15px@2x.png) no-repeat center center;
+			background:@tsmc-grey2 url(/img/icon_pagination_left_10x15px@2x.png) no-repeat center center;
 			background-size:10px 15px;
 			margin-right:15px;
 		}
 
 		&#page_next{
-			background:@tsmc-grey2 url(../img/icon_pagination_right_10x15px@2x.png) no-repeat center center;
+			background:@tsmc-grey2 url(/img/icon_pagination_right_10x15px@2x.png) no-repeat center center;
 			background-size:10px 15px;
 			margin-left:15px;
 		}
@@ -1418,7 +1421,7 @@ body {
 				.icon_plus{
 					width:100%;
 					height:32px;
-					background:url(../img/icon_plus_32x32@2x.png) no-repeat center;
+					background:url(/img/icon_plus_32x32@2x.png) no-repeat center;
 					background-size:32px;
 					position: absolute;
 					bottom:0px;
@@ -1444,7 +1447,7 @@ body {
 
 #galleryIntro{
 	position:relative;
-	padding-bottom:60px;
+	padding-bottom:100px;
 	overflow:hidden;
 
 	@media (min-width: @screen-md-min) {
@@ -1523,6 +1526,8 @@ body {
 	    	bottom:0;
 	    	width:360px;
 	    	padding:90px 30px 0;
+    		font-size:16px;
+    		line-height: 24px;
 
 			@media (max-width: @screen-sm-max) {
 				position:relative;
@@ -1538,18 +1543,18 @@ body {
 
 	    	h3{
 	    		color:@tsmc-red;
-	    		font-size:34px;
+	    		font-size:40px;
+	    		line-height: 48px;
 	    		margin-top:0;
 	    	}
 
 	    	p{
-
 	    	}
 
 	    	.closeGallery{
 	    		width:32px;
 	    		height:32px;
-	    		background:url(../img/icon_closeGallerySlides.png) no-repeat center center;
+	    		background:url(/img/icon_closeGallerySlides.png) no-repeat center center;
 	    		background-size:32px 32px;
 	    		display:block;
 	    		position:absolute;
@@ -1612,11 +1617,11 @@ body {
 	    	top:40px;
 	    	bottom:0;
 	    	width:360px;
-	    	padding:50px 30px 0;
+	    	padding:80px 30px 0;
 	    	color:white;
 
 	    	h3{
-	    		font-size:34px;
+	    		font-size:40px;
 	    		margin-top:0;
 	    		.text-shadow();
 	    		color:white;
@@ -1633,6 +1638,8 @@ body {
 
 	    	p{
 	    		.text-shadow(1px 1px 1px rgba(0,0,0,.8));
+	    		font-size:16px;
+	    		line-height:22px;
 	    	}
 
 	    	a{
@@ -1647,7 +1654,7 @@ body {
 	}
 
 	.pointerCover{
-		background:url(../img/pointerCover_galleryBanner1280x80@2x.png) repeat-x center center;
+		background:url(/img/pointerCover_galleryBanner1280x80@2x.png) repeat-x center center;
 		background-size:1280px 80px;
 		background-position:center 0px;
 		position:absolute;
@@ -1688,7 +1695,7 @@ body {
 }
 
 .dotCover_white{
-	background:url(../img/banner_cover_dot_white_3x3@2x.png) center;
+	background:url(/img/banner_cover_dot_white_3x3@2x.png) center;
 	background-size:3px;
 	position:absolute;
 	z-index: 2;
@@ -1719,7 +1726,7 @@ body {
 	#stickyBookBtn{
 		width:100%;
 		height:100%;
-		background:url(../img/icon_stickyBookBtn_72x72@2x.png) no-repeat center;
+		background:url(/img/icon_stickyBookBtn_72x72@2x.png) no-repeat center;
 		background-size:72px;
 		display:block;
 		cursor: pointer;
@@ -1743,13 +1750,19 @@ body {
 #newsList{
 	.listReset;
 	margin-top:20px;
+	min-height:250px;
 
 	>li{
-		padding:20px 12px;
+		padding:24px 12px;
 		border-bottom:1px solid @tsmc-grey2;
+    	.transition(background 0.3s);
 
 		&:first-child{
 			border-top:1px solid @tsmc-grey2;
+		}
+
+		&:hover{
+			background:lighten(@tsmc-grey0, 3%);
 		}
 
 		.date{
@@ -1761,7 +1774,7 @@ body {
 
 		a{
 			display:inline-block;
-			font-size:20px;
+			font-size:16px;
 		}
 	}
 }
@@ -1771,14 +1784,12 @@ select.form-control{
 	-moz-appearance: none;
 	position:relative;
 
-	background:white url(../img/icon_selectTagArrow.png) no-repeat right center;
+	background:white url(/img/icon_selectTagArrow.png) no-repeat right center;
 	background-size:25px;
 	border:1px solid @tsmc-grey2;
 }
 
 .newsArticle{
-	font-size:16px;
-	line-height:24px;
 
 	time{
 		color:@tsmc-grey3;
@@ -1821,6 +1832,7 @@ select.form-control{
 	border:1px solid @tsmc-grey2;
 	.border-top-radius(6px);
 	.border-bottom-radius(6px);
+	margin:20px 0 50px;
 
 	li{
 		border-left:1px solid @tsmc-grey2;
@@ -1856,15 +1868,15 @@ select.form-control{
 			bottom:0;
 			width:70px;
 			background-size:24px;
-			background:url(../img/icon_openHour_24x24@2x.png) no-repeat center center;
+			background:url(/img/icon_openHour_24x24@2x.png) no-repeat center center;
 
 			&.openHour{
-				background:url(../img/icon_openHour_24x24@2x.png) no-repeat center center;
+				background:url(/img/icon_openHour_24x24@2x.png) no-repeat center center;
 				background-size:24px;
 			}
 
 			&.location{
-				background:url(../img/icon_location_24x24@2x.png) no-repeat center center;
+				background:url(/img/icon_location_24x24@2x.png) no-repeat center center;
 				background-size:24px;
 			}
 		}
@@ -1873,7 +1885,7 @@ select.form-control{
 
 #transportationBox{
 	ul{
-		margin-bottom:50px;
+		margin:20px auto 50px;
 
 		@media (max-width: @screen-xs-max) {
 			margin-bottom:40px;
@@ -1945,7 +1957,7 @@ select.form-control{
 				position: absolute;
 				top:-29px;
 				left:0;
-				background:url(../img/icon_pointer_transportation_35x30@2x.png) no-repeat center;
+				background:url(/img/icon_pointer_transportation_35x30@2x.png) no-repeat center;
 				background-size:35px 30px;
 				width:35px;
 				height:30px;
@@ -2036,19 +2048,46 @@ select.form-control{
 	}
 
 	&[data-area="1"] #galleryHighlight{
-		background:url(../img/galleryMap_1_490x325@2x.png) no-repeat center;
+		background:url(/img/galleryMap_1_490x325@2x.png) no-repeat center;
 	}
 	&[data-area="2"] #galleryHighlight{
-		background:url(../img/galleryMap_2_490x325@2x.png) no-repeat center;
+		background:url(/img/galleryMap_2_490x325@2x.png) no-repeat center;
 	}
 	&[data-area="3"] #galleryHighlight{
-		background:url(../img/galleryMap_3_490x325@2x.png) no-repeat center;
+		background:url(/img/galleryMap_3_490x325@2x.png) no-repeat center;
 	}
 	&[data-area] #galleryHighlight{
 		background-size:@galleryMapImg-md-width auto;
 
 		@media (max-width: @screen-sm-max){
 			background-size:@galleryMapImg-sm-width auto;
+		}
+	}
+}
+
+.gallerySectionList{
+	.listReset;
+	margin-top:16px;
+	display:block;
+
+	>li{
+		margin-bottom:6px;
+		diplay:block;
+
+		.bulletBall{
+			display:inline-block;
+			position: relative;
+			width:20px;
+			height:20px;
+			line-height:19px;
+			color:white;
+			background:@tsmc-red;
+			text-align: center;
+			.border-top-radius(30px);
+			.border-bottom-radius(30px);
+			margin-right:6px;
+			font-size:13px;
+			top:-1px;
 		}
 	}
 }
@@ -2074,7 +2113,7 @@ select.form-control{
 		vertical-align: middle;
 
 		@media (max-width: @screen-xs-max){
-			padding:20px 30px;
+			padding:20px 30px 60px;
 		}
 
 		.subTitle{
@@ -2166,7 +2205,7 @@ select.form-control{
 #galleryPhotoSet{
 	background:@tsmc-grey1;
 	min-height:300px;
-	padding:40px 0 30px;
+	padding:40px 0 100px;
 
 	@media (max-width: 520px){
 		padding-top:0;
@@ -2263,7 +2302,7 @@ select.form-control{
 }
 
 input.datepickerInput{
-	background:white url("../img/icon_calendar_20x20px@2x.png") no-repeat left center;
+	background:white url(/img/icon_calendar_20x20px@2x.png) no-repeat left center;
 	background-size:30px;
 	padding-left:40px;
 }
@@ -2293,7 +2332,7 @@ input.datepickerInput{
 			font-size:24px;
 			color:@tsmc-grey3;
 			top:5px;
-			background:url(../img/icon_expand_minus_16x16@2x.png) no-repeat center;
+			background:url(/img/icon_expand_minus_16x16@2x.png) no-repeat center;
 			background-size:16px 16px;
 			.transition(transform .5s);
 			.opacity(.8);
@@ -2308,7 +2347,7 @@ input.datepickerInput{
 
 	&.minify {
 		.icon_expand{
-			background:url(../img/icon_expand_plus_16x16@2x.png) no-repeat center;
+			background:url(/img/icon_expand_plus_16x16@2x.png) no-repeat center;
 			background-size:16px 16px;
 		}
 
