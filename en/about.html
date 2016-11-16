@@ -39,7 +39,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About the Museum</a>
               <ul class="dropdown-menu dropdown-menu-left">
-                <li><a href="about.html">General Information</a></li>
+                <li><a href="about.html">Introduction</a></li>
                 <li><a href="exhibitionInfo.html">Gallery Overview</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
               </ul>
@@ -66,8 +66,8 @@
     <div id="headerBanner" class="headerBanner contentPage">
       <div class="textContent">
         <div class="tabelCell">
-          <h1>General Information</h1>
-          <h4>A few words about the TSMC Museum of Innovation</h4>
+          <!-- <h1>Introduction to the Museum</h1> -->
+          <!-- <h4>A few words about the TSMC Museum of Innovation</h4> -->
         </div>
       </div>
       <div id="bannerSlideBox">
@@ -82,10 +82,10 @@
           <div class="col-md-9">
             <div class="contentPage">
               <div class="intro">
-                <h2>Innovation originates from an idea, yet it has the potential to introduce unimaginable transformation to billions of people worldwide!</h2>
+                <!-- <h2>Innovation originates from an idea, yet it has the potential to introduce unimaginable transformation to billions of people worldwide!</h2> -->
               </div>
-              <p>The TSMC Museum of Innovation is located at the global headquarters of TSMC, next to the first floor of Fab 12 in the Hsinchu Science Part and occupies over 170 ping.</p>
-              <p>The TSMC Museum of Innovation contains three galleries: A World of Innovation, Unleashing Innovation, and Dr. Morris Chang, TSMC Founder. Through interactive technology, digital content, and historical data, visitors can see how integrated circuits are everywhere in out daily lives, how continuing innovation makes out lives more rich and exciting, and how continuing progress in science and technology opens up unlimited possibilities. At the same time, the exhibits  show the contributions that TSMC has made to global integrated circuit innovation and Taiwan’s  economic development.</p>
+              <p>The TSMC Museum of Innovation is located next to TSMC’s global headquarters and Fab 12A in the Hsinchu Science Park.  Its floor area is approximately 562 square meters.</p>
+              <p>The TSMC Museum of Innovation encompasses three exhibition galleries: "A World of Innovation", "Unleashing Innovation", and "Dr. Morris Chang, TSMC Founder". Through interactive technology, digital content, and historical documents we will learn about the pervasiveness of ICs in our daily lives and about their continued advancement. In addition, we will learn how ICs are making our lives more fulfilling and how they are driving technology beyond our imagination.  We will also learn how TSMC contributes to global IC innovation and to Taiwan’s economy.</p>
               <br>
               <p><img class="img-responsive" src="fakeData/about_video_screenshot_700x400.jpg"></p>
             </div>
@@ -94,13 +94,13 @@
             <div id="side_gettingHere" class="sideInfo sideWithBg">
               <img class="circleImg" src="/img/contact_img_gettingHere.png">
               <h3>Getting Here</h3>
-              <p>TSMC Museum of Innovation is located in the Hsinchu Science Park, here are the different ways to get here.</p>
+              <!-- <p>TSMC Museum of Innovation is located in the Hsinchu Science Park, here are the different ways to get here.</p> -->
               <a href="directions.html">Get Directions ›</a>
             </div>
             <div id="side_visitMuseum" class="sideInfo sideWithBg">
               <img class="circleImg" src="/img/contact_img_visitTheMuseum.png">
               <h3>Visit the Museum</h3>
-              <p>TSMC Museum of Innovation welcome your visit. Please make a reservation in advance.</p>
+              <!-- <p>TSMC Museum of Innovation welcome your visit. Please make a reservation in advance.</p> -->
               <div class="btnBox">
                 <a href="bookOnline_pickDate.html" class="btn btn-outline btn-block">Book Now</a>
               </div>
@@ -123,14 +123,7 @@
       <div id="tsmc_shareBar" class="hidden-print">
           <div class="container">
             <div class="logo"><img alt="TSMC Museum of Innovation" src="/img/tsmc_musium_logo_footer.png" srcset="/img/tsmc_musium_logo_footer@2x.png 2x"></div>
-            <div class="shareBtns">
-              <ul>
-                <li class="text">Share to：</li>
-                <li><a title="Share to Facebook" href="#"><img src="/img/shareBtn_fb.png"></a></li>
-                <li><a title="Share to Twitter" href="#"><img src="/img/shareBtn_twitter.png"></a></li>
-                <li><a title="Share to LinkedIn" href="#"><img src="/img/shareBtn_linkedIn.png"></a></li>
-              </ul>
-            </div>
+            <a id="backToTopBtn" onclick="scrollBackToTop();" href="javascript:void(0);"></a>
           </div>
       </div>
       <div id="tsmc_footerInfo">
@@ -145,9 +138,9 @@
                       <span class="dayL">Saturday:</span>10:00~17:00
                     </div>
                     <div class="infoItem col-md-12 col-sm-6 col-xs-12 withLabel">
-                      <span class="openL">Closed:</span>Sundays, National holidays, and other necessary closing days that will be officially announced
+                      <span class="openL">Closed:</span><div class="indentBox">Sundays, National holidays, and other necessary closing days that will be officially announced</div>
                     </div>
-                    <div class="infoItem col-md-12 col-sm-6 col-xs-12">No. 1, Lixing 7th Rd., Hsinchu Science Park</div>
+                    <div class="infoItem col-md-12 col-sm-6 col-xs-12">No. 1, Li Hsin Rd. 7, Hsinchu Science Park</div>
                     <div class="infoItem col-md-12 col-sm-6 col-xs-12 withLabel">
                       <span class="openL">Phone:</span>03-5631968
                     </div>
@@ -159,7 +152,7 @@
                 <div class="group">
                   <div class="groupTitle">About the Museum</div>
                   <ul class="groupList">
-                    <li><a href="about.html">General Information</a></li>
+                    <li><a href="about.html">Introduction</a></li>
                     <li><a href="exhibitionInfo.html">Gallery Overview</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                   </ul>
@@ -191,7 +184,7 @@
       </div>
       <div id="tsmc_copyright" class="hidden-print">
           <div class="container">
-            <span>© Copyright TSMC Museum. All Rights Reserved.</span><a onclick="popupCenter('legalNotice.html', 'Legal Notice',450,450);" href="javascript:void(0);">Legal Notice</a><a onclick="popupCenter('privacyPolicy.html', 'Privacy Policy',450,450);" href="javascript:void(0);">Privacy Policy</a>
+            <span>Copyright© Taiwan Semiconductor Manufacturing Company Limited 2010-2016, All Rights Reserved.</span><a href="legalNotice.html">Legal Notice</a><a href="privacyPolicy.html">Privacy Policy</a>
           </div>
       </div>
     </footer>
@@ -211,9 +204,9 @@
       $(document).ready(function() {
           $('#kenburns-slideshow').Kenburns({
             images: [
-              "/img/banner/indexBanner_pic1.jpg",
-              "/img/banner/indexBanner_pic2.jpg",
-              "/img/banner/indexBanner_pic3.jpg"
+              "/img/banner/aboutBanner_1.jpg",
+              "/img/banner/indexBanner_pic3.jpg",
+              "/img/banner/indexBanner_pic6.jpg"
             ],
             scale:0.95,
             duration:10000,

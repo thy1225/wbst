@@ -84,3 +84,7 @@ function setLangSwitchURL(){
 	$("#navBtn_lang a").attr("href",langHerfStr);
 }
 
+function scrollBackToTop(){
+	$("body, html").animate({scrollTop:0+"px"},1000,function(){});
+}
+

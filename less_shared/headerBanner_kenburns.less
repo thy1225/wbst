@@ -19,12 +19,17 @@
 @banner-img-sm-height:		   300px;
 @banner-img-sm-width:		   @banner-img-ratio * @banner-img-sm-height;
 
+//xs
+@banner-content-xs-width:         280px;
+@banner-img-xs-height:		   300px;
+@banner-img-xs-width:		   @banner-img-ratio * @banner-img-sm-height;
+
 //contentPage (shorter banner)
 @banner-contentPage-img-lg-width:         1920px;
 @banner-contentPage-img-lg-height:         400px;
 @banner-contentPage-img-ratio:			@banner-contentPage-img-lg-width / @banner-contentPage-img-lg-height;
 
-@banner-contentPage-img-md-height:         350px;
+@banner-contentPage-img-md-height:         400px;
 @banner-contentPage-img-md-width:		   @banner-contentPage-img-ratio * @banner-contentPage-img-md-height;
 
 @banner-contentPage-img-sm-height:         300px;
@@ -56,9 +61,16 @@
 
 		@media (max-width: @screen-sm-max) {
 			width:@banner-content-sm-width;
-			height:@banner-img-sm-height;
+			height:@banner-img-xs-height;
 			max-width:95%;
 			margin-left: -@banner-content-sm-width / 2;
+		}
+
+		@media (max-width: @screen-xs-max) {
+			width:100%;
+			margin-left:0;
+			left:0;
+			max-width:100%;
 		}
 
 		.tabelCell{
@@ -98,21 +110,6 @@
 	}
 
 	&.contentPage{
-		.textContent{
-			//padding-top:120px;
-			
-			@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
-				//padding-top:110px;
-			}
-
-			@media (max-width: @screen-sm-max) {
-				//padding-top:100px;
-				//width:100%;
-				//left:0;
-				//margin-left:0;
-			}
-		}
-
 		#kenburns-slideshow{
 			height:@banner-contentPage-img-lg-height;
 

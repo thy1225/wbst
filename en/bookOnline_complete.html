@@ -39,7 +39,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About the Museum</a>
               <ul class="dropdown-menu dropdown-menu-left">
-                <li><a href="about.html">General Information</a></li>
+                <li><a href="about.html">Introduction</a></li>
                 <li><a href="exhibitionInfo.html">Gallery Overview</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
               </ul>
@@ -78,7 +78,7 @@ If you need to cancel your reservation, please do so before noon on the day prio
           <div class="col-md-8">
             <ul id="bookingProgress">
               <li><div class="progressItem"><span class="icon"><img src="/img/icon_bookProgress1.png"></span>Choose date and time</div></li>
-              <li><div class="progressItem"><span class="icon"><img src="/img/icon_bookProgress2.png"></span>Fill in number of visitors</div></li>
+              <li><div class="progressItem"><span class="icon"><img src="/img/icon_bookProgress2.png"></span>Fill in number of visitors and contact information</div></li>
               <li class="active"><div class="progressItem"><span class="icon"><img src="/img/icon_bookProgress3.png"></span>Complete reservation</div></li>
             </ul>
             <div id="bookForm">
@@ -132,14 +132,7 @@ If you need to cancel your reservation, please do so before noon on the day prio
       <div id="tsmc_shareBar" class="hidden-print">
           <div class="container">
             <div class="logo"><img alt="TSMC Museum of Innovation" src="/img/tsmc_musium_logo_footer.png" srcset="/img/tsmc_musium_logo_footer@2x.png 2x"></div>
-            <div class="shareBtns">
-              <ul>
-                <li class="text">Share to：</li>
-                <li><a title="Share to Facebook" href="#"><img src="/img/shareBtn_fb.png"></a></li>
-                <li><a title="Share to Twitter" href="#"><img src="/img/shareBtn_twitter.png"></a></li>
-                <li><a title="Share to LinkedIn" href="#"><img src="/img/shareBtn_linkedIn.png"></a></li>
-              </ul>
-            </div>
+            <a id="backToTopBtn" onclick="scrollBackToTop();" href="javascript:void(0);"></a>
           </div>
       </div>
       <div id="tsmc_footerInfo">
@@ -154,9 +147,9 @@ If you need to cancel your reservation, please do so before noon on the day prio
                       <span class="dayL">Saturday:</span>10:00~17:00
                     </div>
                     <div class="infoItem col-md-12 col-sm-6 col-xs-12 withLabel">
-                      <span class="openL">Closed:</span>Sundays, National holidays, and other necessary closing days that will be officially announced
+                      <span class="openL">Closed:</span><div class="indentBox">Sundays, National holidays, and other necessary closing days that will be officially announced</div>
                     </div>
-                    <div class="infoItem col-md-12 col-sm-6 col-xs-12">No. 1, Lixing 7th Rd., Hsinchu Science Park</div>
+                    <div class="infoItem col-md-12 col-sm-6 col-xs-12">No. 1, Li Hsin Rd. 7, Hsinchu Science Park</div>
                     <div class="infoItem col-md-12 col-sm-6 col-xs-12 withLabel">
                       <span class="openL">Phone:</span>03-5631968
                     </div>
@@ -168,7 +161,7 @@ If you need to cancel your reservation, please do so before noon on the day prio
                 <div class="group">
                   <div class="groupTitle">About the Museum</div>
                   <ul class="groupList">
-                    <li><a href="about.html">General Information</a></li>
+                    <li><a href="about.html">Introduction</a></li>
                     <li><a href="exhibitionInfo.html">Gallery Overview</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                   </ul>
@@ -200,7 +193,7 @@ If you need to cancel your reservation, please do so before noon on the day prio
       </div>
       <div id="tsmc_copyright" class="hidden-print">
           <div class="container">
-            <span>© Copyright TSMC Museum. All Rights Reserved.</span><a onclick="popupCenter('legalNotice.html', 'Legal Notice',450,450);" href="javascript:void(0);">Legal Notice</a><a onclick="popupCenter('privacyPolicy.html', 'Privacy Policy',450,450);" href="javascript:void(0);">Privacy Policy</a>
+            <span>Copyright© Taiwan Semiconductor Manufacturing Company Limited 2010-2016, All Rights Reserved.</span><a href="legalNotice.html">Legal Notice</a><a href="privacyPolicy.html">Privacy Policy</a>
           </div>
       </div>
     </footer>

@@ -1,4 +1,4 @@
-/* 20161115 */
+/* 20161116-2 */
 
 @import "../bootstrap-3.3.7-grunt/less/variables.less";
 @import "../bootstrap-3.3.7-grunt/less/mixins.less";
@@ -104,6 +104,24 @@ body {
 	}
 }
 
+#backToTopBtn{
+	background:url(/img/icon_backToTop_48x48px@2x.png) no-repeat center;
+	background-size:48px 48px;
+	display:block;
+	width:48px;
+	height:48px;
+	float:right;
+	.opacity(0.3);
+	.transition(opacity 0.3s);
+
+	&:hover{
+		.opacity(1);
+	}
+
+
+	@media (max-width: @screen-xs-max) {display:none;}
+}
+
 #tsmc_shareBar{
 	background:@tsmc-grey5;
 	border-top:1px solid lighten(@tsmc-grey5, 10%);
@@ -115,6 +133,7 @@ body {
 	}
 
 	.shareBtns{
+		display:none;
 		float:right;
 		margin-top:8px;
 		@media (max-width: @screen-xs-max) {float:none;text-align:center;margin-top:16px;}
@@ -181,6 +200,7 @@ body {
 
 				>a{
 					color:white;
+					white-space: nowrap;
 
 					&.mail{
 						font-size:14px;
@@ -204,6 +224,10 @@ body {
 						display:inline-block;
 						min-width:85px;
 					}
+
+					.indentBox{
+						padding-left:60px;
+					}
 				}
 			}
 		}
@@ -216,6 +240,13 @@ body {
 	font-size:90%;
 	padding:25px;
 	border-top:1px solid #404040;
+
+	@media (max-width: @screen-sm-max) { 
+		span{
+			display:block;
+		}
+	}
+
 
 	a{
 		text-transform: uppercase;
@@ -250,6 +281,8 @@ body {
 
 	.col-md-9 .contentPage{
 		margin-right:50px;
+
+		@media (max-width: @screen-sm-max) {margin-right:0;}
 	}
 
 	.pageIntroText{
@@ -258,6 +291,11 @@ body {
 		h2{
 			font-size:40px;
 			line-height:52px;
+
+			@media (max-width: @screen-sm-max) {
+				font-size:26px;
+				line-height:inherit;
+			}
 		}
 
 		p{
@@ -487,24 +525,29 @@ body {
 
 	.listReset;
 	margin:20px 0;
+	.clearfix;
 
 
 	>li{
-		display:inline-block;
+		display:block;
 		font-size:14px;
 		color:@tsmc-grey3;
 		padding-right:40px;
 		position: relative;
+		float:left;
 
 		.progressItem{
 			.opacity(0.4);
+			padding-left:30px;
+			max-width:220px;
 
 			>span.icon{
-				display:inline-block;
+				display:block;
 				margin-right:4px;
 				width:24px;
-				position:relative;
+				position:absolute;
 				top:-2px;
+				left:0;
 
 				img{
 					max-width:100%;
@@ -1094,7 +1137,7 @@ body {
 			.listReset;
 
 			li{
-				padding-left:130px;
+				padding-left:80px;
 				position: relative;
 				color:black;
 				margin-bottom:10px;
@@ -1546,6 +1589,12 @@ body {
 	    		font-size:40px;
 	    		line-height: 48px;
 	    		margin-top:0;
+
+				@media (max-width: @screen-sm-max) {
+					font-size:26px;
+	    			line-height: 40px;
+	    			margin-bottom:3px;
+				}
 	    	}
 
 	    	p{
@@ -2073,10 +2122,11 @@ select.form-control{
 	>li{
 		margin-bottom:6px;
 		diplay:block;
+		position: relative;
 
 		.bulletBall{
-			display:inline-block;
-			position: relative;
+			display:block;
+			position: absolute;
 			width:20px;
 			height:20px;
 			line-height:19px;
@@ -2087,7 +2137,12 @@ select.form-control{
 			.border-bottom-radius(30px);
 			margin-right:6px;
 			font-size:13px;
-			top:-1px;
+			top:1px;
+		}
+
+		.name{
+			display:block;
+			padding-left:25px;
 		}
 	}
 }
@@ -2379,6 +2434,13 @@ input.datepickerInput{
 	.title{
 		font-size:16px;
 		margin-bottom:5px;
+	}
+}
+
+
+.gMapScrolloff {
+	@media (min-width: @screen-sm-min){
+    	pointer-events: none;
 	}
 }
 

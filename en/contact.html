@@ -39,7 +39,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About the Museum</a>
               <ul class="dropdown-menu dropdown-menu-left">
-                <li><a href="about.html">General Information</a></li>
+                <li><a href="about.html">Introduction</a></li>
                 <li><a href="exhibitionInfo.html">Gallery Overview</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
               </ul>
@@ -69,8 +69,8 @@
         <div class="row">
           <div class="col-md-9">
             <h1>Contact Us</h1>
-            <p>To save time, please check if your question has already been answered in the <a href="faq.html">FAQs</a>.</p>
-            <p>If the FAQs do not contain your question, please contact us by phone or fill out the form below and send it to Customer Service. We will help you as soon as possible! <br>During work hours, please call 03-5631968.</p>
+            <p>To save your time, please see if your questions have already been answered in the <a href="faq.html">FAQs</a>.</p>
+            <p>If the FAQs do not contain your questions, please contact us at 03-5631968 during work hours.<br>Or please fill out the inquiry form below. We will reply to you as soon as possible!</p>
             <form id="contactForm" method="get">
               <div id="bookForm">
                  <div id="contactUs" class="contactInfo">
@@ -109,7 +109,7 @@
                     </div>
                     <div class="col-xs-12">
                       <div class="form-group">
-                        <label for="input_msg">Please leave your question or comment here. Thank you!</label>
+                        <label for="input_msg"> Please leave your questions here. Thank you!</label>
                         <textarea class="form-control" id="input_msg" name="input_msg" rows="4" placeholder=""></textarea>
                       </div>
                     </div>
@@ -133,13 +133,13 @@
             <div id="side_gettingHere" class="sideInfo sideWithBg">
               <img class="circleImg" src="/img/contact_img_gettingHere.png">
               <h3>Getting Here</h3>
-              <p>TSMC Museum of Innovation is located in the Hsinchu Science Park, here are the different ways to get here.</p>
+              <!-- <p>TSMC Museum of Innovation is located in the Hsinchu Science Park, here are the different ways to get here.</p> -->
               <a href="directions.html">Get Directions ›</a>
             </div>
             <div id="side_visitMuseum" class="sideInfo sideWithBg">
               <img class="circleImg" src="/img/contact_img_visitTheMuseum.png">
               <h3>Visit the Museum</h3>
-              <p>TSMC Museum of Innovation welcome your visit. Please make a reservation in advance.</p>
+              <!-- <p>TSMC Museum of Innovation welcome your visit. Please make a reservation in advance.</p> -->
               <div class="btnBox">
                 <a href="bookOnline_pickDate.html" class="btn btn-outline btn-block">Book Now</a>
               </div>
@@ -162,14 +162,7 @@
       <div id="tsmc_shareBar" class="hidden-print">
           <div class="container">
             <div class="logo"><img alt="TSMC Museum of Innovation" src="/img/tsmc_musium_logo_footer.png" srcset="/img/tsmc_musium_logo_footer@2x.png 2x"></div>
-            <div class="shareBtns">
-              <ul>
-                <li class="text">Share to：</li>
-                <li><a title="Share to Facebook" href="#"><img src="/img/shareBtn_fb.png"></a></li>
-                <li><a title="Share to Twitter" href="#"><img src="/img/shareBtn_twitter.png"></a></li>
-                <li><a title="Share to LinkedIn" href="#"><img src="/img/shareBtn_linkedIn.png"></a></li>
-              </ul>
-            </div>
+            <a id="backToTopBtn" onclick="scrollBackToTop();" href="javascript:void(0);"></a>
           </div>
       </div>
       <div id="tsmc_footerInfo">
@@ -184,9 +177,9 @@
                       <span class="dayL">Saturday:</span>10:00~17:00
                     </div>
                     <div class="infoItem col-md-12 col-sm-6 col-xs-12 withLabel">
-                      <span class="openL">Closed:</span>Sundays, National holidays, and other necessary closing days that will be officially announced
+                      <span class="openL">Closed:</span><div class="indentBox">Sundays, National holidays, and other necessary closing days that will be officially announced</div>
                     </div>
-                    <div class="infoItem col-md-12 col-sm-6 col-xs-12">No. 1, Lixing 7th Rd., Hsinchu Science Park</div>
+                    <div class="infoItem col-md-12 col-sm-6 col-xs-12">No. 1, Li Hsin Rd. 7, Hsinchu Science Park</div>
                     <div class="infoItem col-md-12 col-sm-6 col-xs-12 withLabel">
                       <span class="openL">Phone:</span>03-5631968
                     </div>
@@ -198,7 +191,7 @@
                 <div class="group">
                   <div class="groupTitle">About the Museum</div>
                   <ul class="groupList">
-                    <li><a href="about.html">General Information</a></li>
+                    <li><a href="about.html">Introduction</a></li>
                     <li><a href="exhibitionInfo.html">Gallery Overview</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                   </ul>
@@ -230,7 +223,7 @@
       </div>
       <div id="tsmc_copyright" class="hidden-print">
           <div class="container">
-            <span>© Copyright TSMC Museum. All Rights Reserved.</span><a onclick="popupCenter('legalNotice.html', 'Legal Notice',450,450);" href="javascript:void(0);">Legal Notice</a><a onclick="popupCenter('privacyPolicy.html', 'Privacy Policy',450,450);" href="javascript:void(0);">Privacy Policy</a>
+            <span>Copyright© Taiwan Semiconductor Manufacturing Company Limited 2010-2016, All Rights Reserved.</span><a href="legalNotice.html">Legal Notice</a><a href="privacyPolicy.html">Privacy Policy</a>
           </div>
       </div>
     </footer>

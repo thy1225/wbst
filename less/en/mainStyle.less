@@ -9,6 +9,11 @@
 		h2{
 			font-size:36px;
 			line-height:44px;
+
+			@media (max-width: @screen-sm-max) {
+				font-size:24px;
+				line-height:inherit;
+			}
 		}
 
 		p{
@@ -20,6 +25,8 @@
 
 #galleryIntro{
 	.visitMuseum .textContent{
+		padding-top:60px;
+
 		h3{
 			font-size:36px;
 		}
@@ -55,3 +62,31 @@
 		}
 	}
 }
+
+#stickyBox{
+
+	#stickyBookBtn{
+		background:url(/img/icon_stickyBookBtn_en_72x72@2x.png) no-repeat center;
+		background-size:72px;
+	}
+}
+
+#bookingProgress{
+	>li:nth-child(2) .progressItem{
+		top:-5px;
+		line-height:1.2;
+		position:relative;
+
+		>span.icon{
+			top:3px;
+		}
+	}
+}
+
+#bookedInfoBox .bottom ul li {
+	padding-left:130px;
+	
+	@media (max-width: 400px) { padding-left:0;}
+}
+
+

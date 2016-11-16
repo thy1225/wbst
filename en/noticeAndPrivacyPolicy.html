@@ -39,7 +39,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About the Museum</a>
               <ul class="dropdown-menu dropdown-menu-left">
-                <li><a href="about.html">General Information</a></li>
+                <li><a href="about.html">Introduction</a></li>
                 <li><a href="exhibitionInfo.html">Gallery Overview</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
               </ul>
@@ -78,15 +78,15 @@
               <section>
                 <h2>Terms and conditions:</h2>
                 <ol>
-                  <li>If there are more than 15 individuals in your part, please film out the <a href="bookOnline_special.html" target="_blank">Large Group Tour Request Form</a>.</li>
+                  <li>For a school group with more than 15 people, please fill out the <a href="bookOnline_special.html" target="_blank">School Group Tour Reservation Form</a>. For other groups with more than 15 people, please fill out the <a href="bookOnline_special.html" target="_blank">Large Group Tour Reservation Form</a>.</li>
                   <li>The services provided by this Online Reservation System include making, viewing, and canceling reservations and providing visitor information.</li>
-                  <li>Online reservations can be made 24 hours a day. Reservations can be made one month in advance beginning on the first day of the month to the day before the reservation date. Same-day reservations will not be accepted.</li>
+                  <li>Online reservations can be made for reservations starting the next day to the end of the next month. Same-day reservations will not be accepted.</li>
                   <li>In the event of cancelation, the system will automatically display the quota available. The system does not hold reservations or have waitlists.</li>
-                  <li>Your reservation is only successful if the reservation completion page displays your reservation code. Please take advantage of the <a href="reservation_login.html" target="_blank">View/Cancel Reservation</a> function to confirm that your request has been confirmed!</li>
-                  <li>Users meeting any of the following conditions will not be able make reservations. The TSMC Museum of Innovation also reserves the right to claim compensation for any damages or losses to the TSMC Museum of Innovation resulting from these conditions:
+                  <li>Your reservation is only successful if the reservation completion page displays your reservation code. Please take advantage of the <a href="reservation_login.html" target="_blank">View/Cancel Reservation</a> function to confirm that your request has been successful!</li>
+                  <li>Entering the Museum indicates that you agree to all of the above-mentioned terms and conditions. Visitors shall not cause any damage or destruction to Museum's exhibits or facility.  Users meeting any of the following conditions will not be able make reservations.
                     <ol>
                       <li>The user fails to show up at the reserved time without prior notice or cancelation beforehand for 3 or more times.</li>
-                      <li>The user makes numerous reservations and then cancels numerous reservations <span class="red">after noon on the day prior to the visit</span>, thereby affecting the rights of other visitors.</li>
+                      <li>The user makes numerous reservations and then cancels numerous reservations, thereby affecting the rights of other visitors.</li>
                       <li>The user resells the reservation code for commercial profit.</li>
                       <li>The user violates visitor policies during their visit and does not heed reminders or warnings.</li>
                     </ol>
@@ -111,15 +111,17 @@
                   </li>
                   <li>
                     <div class="title">Your Rights pursuant to the Personal Information Protection Act</div>
-                    <p>You understand that you have the right to (1) inquire or request to read, (2) request a copy of, (3) request to amend or correct, (4) request the cessation of the collection, processing, or use of; and (5) request the deletion of your personal information provided to TSMC.  However, you also understand that, when you exercise the above-mentioned rights, TSMC may charge reasonable and necessary fees.</p>
+                    <p>You understand that you have the right to (1) inquire or request to read, (2) request a copy of, (3) request to amend or correct, (4) request the cessation of the collection, processing, or use of; and (5) request the deletion of your personal information provided to TSMC.</p>
                   </li>
                   <li>
                     <div class="title">The Impact on Your Rights if the Personal Information is not Provided</div>
-                    <p>You may decide at your free will whether to provide your personal information to TSMC.  However, you also understand that if your personal information is not provided, TSMC will not be able to provide you with the interactive activity. </p>
-                    <p>I have fully read and understood the informed items for personal information described above by TSMC, and hereby agree and authorize TSMC to collect, process and use my personal information.</p>
-                    <p>With regard to the personal information I provide to TSMC, I agree to waive, any claims I may have for damages or restitutions against TSMC or the parties mentioned in Section 3 from above, unless TSMC or the said parties are found in violation of the Personal Data Protection Act. </p>
+                    <p>You may decide at your free will whether to provide your personal information to TSMC.  However, you also understand that if your personal information is not provided, TSMC will not be able to provide you with the interactive activity.</p>
                   </li>
                 </ol>
+                <br>
+                <b>To Taiwan Semiconductor Manufacturing Co., Ltd. (TSMC):</b>
+                <p>I have fully read and understood the informed items for personal information described above by TSMC, and hereby agree and authorize TSMC to collect, process and use my personal information.</p>
+                <p>With regard to the personal information I provide to TSMC, I agree to waive, any claims I may have for damages or restitutions against TSMC or the parties mentioned in Section 3 from above, unless TSMC or the said parties are found in violation of the Personal Data Protection Act.</p>
               </section>
             </div>
           </div>
@@ -140,14 +142,7 @@
       <div id="tsmc_shareBar" class="hidden-print">
           <div class="container">
             <div class="logo"><img alt="TSMC Museum of Innovation" src="/img/tsmc_musium_logo_footer.png" srcset="/img/tsmc_musium_logo_footer@2x.png 2x"></div>
-            <div class="shareBtns">
-              <ul>
-                <li class="text">Share to：</li>
-                <li><a title="Share to Facebook" href="#"><img src="/img/shareBtn_fb.png"></a></li>
-                <li><a title="Share to Twitter" href="#"><img src="/img/shareBtn_twitter.png"></a></li>
-                <li><a title="Share to LinkedIn" href="#"><img src="/img/shareBtn_linkedIn.png"></a></li>
-              </ul>
-            </div>
+            <a id="backToTopBtn" onclick="scrollBackToTop();" href="javascript:void(0);"></a>
           </div>
       </div>
       <div id="tsmc_footerInfo">
@@ -162,9 +157,9 @@
                       <span class="dayL">Saturday:</span>10:00~17:00
                     </div>
                     <div class="infoItem col-md-12 col-sm-6 col-xs-12 withLabel">
-                      <span class="openL">Closed:</span>Sundays, National holidays, and other necessary closing days that will be officially announced
+                      <span class="openL">Closed:</span><div class="indentBox">Sundays, National holidays, and other necessary closing days that will be officially announced</div>
                     </div>
-                    <div class="infoItem col-md-12 col-sm-6 col-xs-12">No. 1, Lixing 7th Rd., Hsinchu Science Park</div>
+                    <div class="infoItem col-md-12 col-sm-6 col-xs-12">No. 1, Li Hsin Rd. 7, Hsinchu Science Park</div>
                     <div class="infoItem col-md-12 col-sm-6 col-xs-12 withLabel">
                       <span class="openL">Phone:</span>03-5631968
                     </div>
@@ -176,7 +171,7 @@
                 <div class="group">
                   <div class="groupTitle">About the Museum</div>
                   <ul class="groupList">
-                    <li><a href="about.html">General Information</a></li>
+                    <li><a href="about.html">Introduction</a></li>
                     <li><a href="exhibitionInfo.html">Gallery Overview</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                   </ul>
@@ -208,7 +203,7 @@
       </div>
       <div id="tsmc_copyright" class="hidden-print">
           <div class="container">
-            <span>© Copyright TSMC Museum. All Rights Reserved.</span><a onclick="popupCenter('legalNotice.html', 'Legal Notice',450,450);" href="javascript:void(0);">Legal Notice</a><a onclick="popupCenter('privacyPolicy.html', 'Privacy Policy',450,450);" href="javascript:void(0);">Privacy Policy</a>
+            <span>Copyright© Taiwan Semiconductor Manufacturing Company Limited 2010-2016, All Rights Reserved.</span><a href="legalNotice.html">Legal Notice</a><a href="privacyPolicy.html">Privacy Policy</a>
           </div>
       </div>
     </footer>
