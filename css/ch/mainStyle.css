@@ -1502,6 +1502,15 @@ body.popOutPage {
 .tsmc-alert a {
   white-space: nowrap;
 }
+.alert-withTopMargin {
+  margin-top: 20px;
+}
+.alert-withTopMargin .title {
+  font-weight: bold;
+}
+.alert-withTopMargin p {
+  color: #595959;
+}
 #bookingProgress {
   padding: 0;
   margin: 0;
