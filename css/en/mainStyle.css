@@ -2267,7 +2267,7 @@ body.popOutPage {
   list-style: none;
 }
 #bookedInfoBox .bottom ul li {
-  padding-left: 80px;
+  padding-left: 90px;
   position: relative;
   color: black;
   margin-bottom: 10px;
@@ -3215,6 +3215,12 @@ select.form-control {
   -webkit-transition: background 0.5s;
   -o-transition: background 0.5s;
   transition: background 0.5s;
+  min-height: 380px;
+}
+@media (max-width: 767px) {
+  #mapBox #galleryHighlight {
+    min-height: 220px;
+  }
 }
 #mapBox .areaMap {
   position: relative;
