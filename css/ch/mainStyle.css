@@ -2030,6 +2030,7 @@ body.popOutPage {
 }
 #bookForm .visitDateTime #bookDateTimeBox ul li.header {
   background: none;
+  font-weight: bold;
 }
 @media (max-width: 767px) {
   #bookForm .visitDateTime #bookDateTimeBox ul li.header .date {
@@ -3586,4 +3587,7 @@ input.datepickerInput {
   .gMapScrolloff {
     pointer-events: none;
   }
+}
+.italic {
+  font-style: italic;
 }
