@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
-/* 20161117 */
+/* 20161121 */
 .dont-break-out {
   /* These are technically the same, but use both */
   overflow-wrap: break-word;
@@ -3190,13 +3190,13 @@ select.form-control {
 }
 .mapDisplayTable {
   display: table;
-  min-height: 380px;
+  height: 380px;
   margin: 0 auto;
 }
 @media (max-width: 767px) {
   .mapDisplayTable {
     margin-top: 20px;
-    min-height: 220px;
+    height: 220px;
   }
 }
 #mapBox {
@@ -3215,11 +3215,11 @@ select.form-control {
   -webkit-transition: background 0.5s;
   -o-transition: background 0.5s;
   transition: background 0.5s;
-  min-height: 380px;
+  height: 380px;
 }
 @media (max-width: 767px) {
   #mapBox #galleryHighlight {
-    min-height: 220px;
+    height: 220px;
   }
 }
 #mapBox .areaMap {
@@ -3356,7 +3356,7 @@ select.form-control {
 }
 #galleryDemo {
   display: table;
-  min-height: 380px;
+  height: 380px;
   position: absolute;
   top: 0;
   left: 0;

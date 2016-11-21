@@ -393,6 +393,8 @@
           $("#galleryDemo").fadeOut(function(){$(this).remove()});
           clearInterval(demoInterval);
         }
+        
+        $("area").focus(function() { $(this).blur(); });
 
       });
     </script>
