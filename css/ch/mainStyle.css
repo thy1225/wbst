@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
-/* 20161121 */
+/* 20161122 */
 .dont-break-out {
   /* These are technically the same, but use both */
   overflow-wrap: break-word;
@@ -1510,6 +1510,37 @@ body.popOutPage {
 }
 .alert-withTopMargin p {
   color: #595959;
+}
+#bookedFullAlert {
+  background: rgba(179, 42, 42, 0.85);
+  color: white;
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  z-index: 20;
+  max-width: 600px;
+}
+@media (max-width: 991px) {
+  #bookedFullAlert {
+    right: 10px;
+    left: 10px;
+    bottom: -10px;
+    max-width: none;
+  }
+}
+#bookedFullAlert .title {
+  font-weight: bold;
+}
+#bookedFullAlert .close {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  color: rgba(0, 0, 0, 0.6);
+  -webkit-text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+#bookedFullAlert .close:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 #bookingProgress {
   padding: 0;

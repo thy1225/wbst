@@ -23,6 +23,10 @@
   </head>
 
   <body>
+    <div id="bookedFullAlert" class="alert alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="title">預約已額滿</div>很抱歉！目前預約已額滿。系統將於下個月的一日上午九時再次開放預約。如有不便之處，敬請見諒。謝謝。
+    </div>
     <nav id="navTSMC" class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -74,7 +78,7 @@
       <div class="dotCover"></div>
     </div>
     <div id="mainContentBox" class="homePage">
-      <div id="stickyBox">
+      <div id="stickyBox" class="hide">
         <div class="closeSticky"></div>
         <a id="stickyBookBtn" href="bookOnline_pickDate.html"></a>
       </div>
