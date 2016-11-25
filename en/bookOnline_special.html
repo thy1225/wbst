@@ -279,6 +279,7 @@
       var tomorrow;
       var lastDayBooking;
       var calendarData = [];
+      var btnProtected = false;
       $(document).ready(function(){
         $.ajax({
           url: "fakeData/calendarStatus.json",
@@ -345,12 +346,18 @@
         }
 
         $("#addNewBtn").click(function(){
+          if(btnProtected==true){return;}
+          btnProtected = true;
+          setTimeout(function(){btnProtected = false;},600);
           addWishRow();
         });
 
         function deleteLinkActivate(){
           $(".bDeleteLink").unbind("click");
           $(".bDeleteLink").click(function(){
+            if(btnProtected==true){return;}
+            btnProtected = true;
+            setTimeout(function(){btnProtected = false;},600);
             $("#row_"+$(this).attr("data-row")).fadeOut("fast",function(){$(this).remove();});
             $("#bDelete_"+Number($(this).attr("data-row")-1)).fadeIn("fast");
             activateDatepicker();

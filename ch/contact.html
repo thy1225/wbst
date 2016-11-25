@@ -243,30 +243,49 @@
         $.validator.addMethod('email_tsmc', function (value) {
                 return /^[^\s]+@[^\s]+\.[^\s]{2,4}$/.test(value);
             });
+
+        $.validator.addMethod('onlySpace', function (value) {
+                return /\S/.test(value);
+            });
+
         $("#contactForm").validate({
           rules: {
-                  input_name: "required",
+                  input_name: {
+                                required:true,
+                                onlySpace:true
+                                },
                   input_email: {
                                 required:true,
                                 email:true,
                                 email_tsmc:true
                                 },
                   input_phone: {
-                                required:true
+                                required:true,
+                                onlySpace:true
                                 },
-                  input_msg: "required"
+                  input_msg: {
+                                required:true,
+                                onlySpace:true
+                                },
                   },
           messages:{
-                  input_name: "請輸入姓名",
+                  input_name: {
+                                required:"請輸入姓名",
+                                onlySpace:"姓名不可留空"
+                                },
                   input_email: {
                                 required:"請輸入E-mail",
                                 email:"請輸入正確格式的E-mail",
                                 email_tsmc:"請輸入正確格式的E-mail"
                                 },
                   input_phone: {
-                                required:"請輸入行動電話"
+                                required:"請輸入行動電話",
+                                onlySpace:"行動電話不可留空"
                                 },
-                  input_msg: "請輸入留言"
+                  input_msg: {
+                                required:"請輸入留言",
+                                onlySpace:"留言不可留空"
+                                },
                   },
         submitHandler: function(form) {
                   if(typeof $("input:radio[name='genderOptions']:checked").val()=="undefined"){

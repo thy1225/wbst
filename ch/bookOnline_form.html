@@ -246,7 +246,7 @@
                     <div class="col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input id="checkbox_agreement" type="checkbox"> 我已詳閱並充分瞭解 <a onclick="popupCenter('noticeAndPrivacyPolicy.html', '注意事項暨隱私權聲明',450,450);" href="javascript:void(0);">注意事項暨隱私權聲明</a>。
+                          <input id="checkbox_agreement" type="checkbox"> 我已詳閱並充分瞭解 <a href="noticeAndPrivacyPolicy.html" target="_blank">注意事項暨隱私權聲明</a>。
                         </label>
                       </div>
                     </div>
@@ -423,7 +423,8 @@
                                 },
                   input_phone: {
                                 required:true,
-                                digits:true
+                                digits:true,
+                                maxlength:20
                                 },
                   input_captcha: "required"
                   },
@@ -457,7 +458,8 @@
                                 },
                   input_phone: {
                                 required:"請輸入行動電話",
-                                digits:"行動電話格式錯誤，請勿使用全形或符號"
+                                digits:"行動電話格式錯誤，請勿使用全形或符號",
+                                maxlength:"最多只能輸入20碼"
                                 },
                   input_captcha: "請輸入驗証碼"
                   },

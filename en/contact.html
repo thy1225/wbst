@@ -242,30 +242,49 @@
         $.validator.addMethod('email_tsmc', function (value) {
                 return /^[^\s]+@[^\s]+\.[^\s]{2,4}$/.test(value);
             });
+
+        $.validator.addMethod('onlySpace', function (value) {
+                return /\S/.test(value);
+            });
+        
         $("#contactForm").validate({
           rules: {
-                  input_name: "required",
+                  input_name: {
+                                required:true,
+                                onlySpace:true
+                                },
                   input_email: {
                                 required:true,
                                 email:true,
                                 email_tsmc:true
                                 },
                   input_phone: {
-                                required:true
+                                required:true,
+                                onlySpace:true
                                 },
-                  input_msg: "required"
+                  input_msg: {
+                                required:true,
+                                onlySpace:true
+                                },
                   },
           messages:{
-                  input_name: "Please fill in full name",
+                  input_name: {
+                                required:"Please fill in full name",
+                                onlySpace:"The field only contain space."
+                                },
                   input_email: {
                                 required:"Please fill in E-mail address",
                                 email:"Incorrect Email format",
                                 email_tsmc:"Incorrect Email format"
                                 },
                   input_phone: {
-                                required:"Please fill in  phone number"
+                                required:"Please fill in  phone number",
+                                onlySpace:"The field only contain space."
                                 },
-                  input_msg: "Please leave your question or comment"
+                  input_msg: {
+                                required:"Please leave your question or comment",
+                                onlySpace:"The field only contain space."
+                                },
                   },
         submitHandler: function(form) {
                   if(typeof $("input:radio[name='genderOptions']:checked").val()=="undefined"){

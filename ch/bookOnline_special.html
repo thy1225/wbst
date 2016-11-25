@@ -279,6 +279,7 @@
       var tomorrow;
       var lastDayBooking;
       var calendarData = [];
+      var btnProtected = false;
       $(document).ready(function(){
         $.ajax({
           url: "fakeData/calendarStatus.json",
@@ -345,12 +346,18 @@
         }
 
         $("#addNewBtn").click(function(){
+          if(btnProtected==true){return;}
+          btnProtected = true;
+          setTimeout(function(){btnProtected = false;},600);
           addWishRow();
         });
 
         function deleteLinkActivate(){
           $(".bDeleteLink").unbind("click");
           $(".bDeleteLink").click(function(){
+            if(btnProtected==true){return;}
+            btnProtected = true;
+            setTimeout(function(){btnProtected = false;},600);
             $("#row_"+$(this).attr("data-row")).fadeOut("fast",function(){$(this).remove();});
             $("#bDelete_"+Number($(this).attr("data-row")-1)).fadeIn("fast");
             activateDatepicker();
@@ -366,7 +373,8 @@
                   input_visitorNum: {
                                 required:true,
                                 digits:true,
-                                min:16
+                                min:16,
+                                maxlength:3
                                 },
                   input_name: "required",
                   input_email: {
@@ -384,7 +392,8 @@
                   input_visitorNum: {
                                 required:"請填寫參觀人數",
                                 digits:"請填寫數字",
-                                min:"需滿16人以上才符合大型團體預約規定"
+                                min:"需滿16人以上才符合大型團體預約規定",
+                                maxlength:"無法輸入超過3位數"
                                 },
                   input_groupTitle: "請輸入團體名稱",
                   input_name: "請輸入姓名",

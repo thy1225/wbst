@@ -310,6 +310,10 @@
                   sDate_end: "請選擇查詢最終日"
                   },
         submitHandler: function(form) {
+                  if(new Date($("#sDate_start").val()) > new Date($("#sDate_end").val())){
+                    alert("搜尋的起始日不可晚於最終日，請修改搜尋日期。");
+                    return;
+                  }
                   $("#book_visitors").val($("#sVisitors_select").val());
                   searchBtnTxt = $("#searchBtn").text();
                   $("#searchBtn").html("傳送中…");
