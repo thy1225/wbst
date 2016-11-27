@@ -1,4 +1,45 @@
 $(document).ready(function(){
+	$(function() { $.reject({
+			reject: {
+				safari: 7, // Apple Safari
+				chrome: 32, // Google Chrome
+				firefox: 27, // Mozilla Firefox
+				msie: 8, // Microsoft Internet Explorer <= 8
+				opera: 19, // Opera
+				konqueror: true, // Konqueror (Linux)
+				unknown: true // Everything else
+			},
+			display: ['chrome','firefox','safari','msie'],
+			imagePath: '/img/browserIcon/',
+			browserInfo: { // Settings for which browsers to display  
+		        chrome: { 
+		            text: 'Google Chrome',  
+		            url: 'http://www.google.com/chrome/',
+		        },  
+		        firefox: {  
+		            text: 'Mozilla Firefox',  
+		            url: 'http://www.mozilla.com/firefox/'  
+		        },
+		        safari: {  
+		            text: 'Safari',  
+		            url: 'http://www.apple.com/safari/download/'
+		        },
+		        msie: {  
+		            text: 'Microsoft Edge',  
+		            url: 'https://www.microsoft.com/en-us/download/details.aspx?id=48126'  
+		        }  
+		    },
+		    closeCookie: true,
+		    beforeReject: function() { 
+	            if ($.os.name === 'iphone' || $.os.name === 'ipad' || $.os.name === 'Android' || $.os.name === 'Mobile') {  
+	                this.browserShow = false;  
+	                this.paragraph2 = '';  
+	            }  
+	        } ,
+		    closeMessage: ''
+		});
+	});
+
 	$("#navTSMC .dropdown").hover(function(){
 							if($(".navbar-toggle").is(":visible")){return;}
 							$(this).find('.dropdown-toggle').dropdown("toggle");
@@ -13,6 +54,13 @@ $(document).ready(function(){
 	$('#navTSMC').on('show.bs.dropdown', function (e) {
 		if($(".navbar-toggle").is(":visible")){return;}
 	  	e.relatedTarget.parent().find(".dropdown-menu").fadeIn(400,function(){$(this).removeAttr("style")});//.fadeIn();
+	});
+
+	$('#navbar').on('show.bs.collapse', function () {
+	  $("body").addClass("navMenuOpen");
+	});
+	$('#navbar').on('hidden.bs.collapse', function () {
+	  $("body").removeClass("navMenuOpen");
 	});
 
 	setLangSwitchURL();
