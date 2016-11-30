@@ -280,7 +280,6 @@
     <script src="/script/ch/jquery-ui.min.js"></script>
     <script src="/script/ch/jquery.validate.min.js"></script>
     <script src="/script/ch/datepicker-zh-TW.js"></script>
-    <script src="/script/en/jquery.reject.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/script/ch/ie10-viewport-bug-workaround.js"></script>
     <script src="/script/ch/global.js"></script>
@@ -288,6 +287,7 @@
     <!-- <script src="/script/ch/swiper.min.js"></script> -->
     <script src="/script/ch/swiper.jquery.min.js"></script>
     <script type="text/javascript">
+    var disableSwiper = false;
     var swipers = {};
 
     var headerTitles = ["創新無所不在",
@@ -298,7 +298,7 @@
                         "加速創新 綻放無限精彩",
                         "改變世界的創新商業模式"];
 
-  $(document).ready(function() {
+    $(document).ready(function(){
       $('#kenburns-slideshow').Kenburns({
         images: [
           "/img/banner/indexBanner_pic1.jpg",
@@ -332,6 +332,7 @@
       initSwiper(3);
 
       function initSwiper(num){
+        if(disableSwiper == true){return;}
         swipers["swiperG"+num] = new Swiper('#gallery'+num+' .swiper-container', {
             pagination: '.swiper-pagination'+num,
             paginationClickable: true,
@@ -344,6 +345,7 @@
       }
 
       function reinitSlider(dataNum){
+        if(disableSwiper == true){return;}
         swipers["swiperG"+dataNum].destroy(false,true);
         initSwiper(dataNum);
       }
@@ -397,6 +399,9 @@
 
 
   });
-    </script>
+  </script>
+  <!--[if lt IE 9]>
+    <script>disableSwiper = true;</script>
+  <![endif]-->
   </body>
 </html>

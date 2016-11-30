@@ -275,7 +275,6 @@
     <script src="/script/en/bootstrap.min.js"></script>
     <script src="/script/en/jquery-ui.min.js"></script>
     <script src="/script/en/jquery.validate.min.js"></script>
-    <script src="/script/en/jquery.reject.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="/script/en/ie10-viewport-bug-workaround.js"></script>
     <script src="/script/en/global.js"></script>
@@ -283,6 +282,7 @@
     <!-- <script src="/script/en/swiper.min.js"></script> -->
     <script src="/script/en/swiper.jquery.min.js"></script>
     <script type="text/javascript">
+    var disableSwiper = false;
     var swipers = {};
 
     var headerTitles = ["A World of Innovation",
@@ -327,6 +327,7 @@
       initSwiper(3);
 
       function initSwiper(num){
+        if(disableSwiper == true){return;}
         swipers["swiperG"+num] = new Swiper('#gallery'+num+' .swiper-container', {
             pagination: '.swiper-pagination'+num,
             paginationClickable: true,
@@ -339,6 +340,7 @@
       }
 
       function reinitSlider(dataNum){
+        if(disableSwiper == true){return;}
         swipers["swiperG"+dataNum].destroy(false,true);
         initSwiper(dataNum);
       }
@@ -393,5 +395,8 @@
 
   });
     </script>
+  <!--[if lt IE 9]>
+    <script>disableSwiper = true;</script>
+  <![endif]-->
   </body>
 </html>

@@ -285,6 +285,7 @@
     <script src="/script/en/swiper.jquery.min.js"></script>
     <script src="/script/en/lightbox.min.js"></script>
     <script type="text/javascript">
+      var disableSwiper = false;
       var currentArea = 0;
       var slideSpeed = 600;
       var galleryPhotoSwiper;
@@ -308,6 +309,8 @@
                 //$('#status').html("Loading Complete");
               }
             });
+        
+        if(disableSwiper == true){return;}
 
             gallerySwiper = new Swiper();
             galleryPhotoSwiper = new Swiper('#galleryPhotoSet', {
@@ -397,6 +400,9 @@
         $("area").focus(function() { $(this).blur(); });
 
       });
-    </script>
+  </script>
+  <!--[if lt IE 9]>
+    <script>disableSwiper = true;</script>
+  <![endif]-->
   </body>
 </html>

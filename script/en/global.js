@@ -1,3 +1,5 @@
+document.write('<script src="/script/en/jquery.reject.js"><\/script>');
+
 $(document).ready(function(){
 	$(function() { $.reject({
 			reject: {
