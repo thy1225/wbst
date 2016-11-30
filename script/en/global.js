@@ -31,7 +31,7 @@ $(document).ready(function(){
 		            url: 'https://www.microsoft.com/en-us/download/details.aspx?id=48126'  
 		        }  
 		    },
-		    closeCookie: true,
+		    closeCookie: false,
 		    beforeReject: function() { 
 	            if ($.os.name === 'iphone' || $.os.name === 'ipad' || $.os.name === 'Android' || $.os.name === 'Mobile') {  
 	                this.browserShow = false;  
