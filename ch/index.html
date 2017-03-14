@@ -262,7 +262,7 @@
                     <li><a href="news.html">最新消息</a></li>
                   </ul>
                 </div>
-                
+
               </div>
             </div>
           </div>
@@ -297,6 +297,8 @@
                         "創新是一切進步的關鍵",
                         "加速創新 綻放無限精彩",
                         "改變世界的創新商業模式"];
+
+    headerTitles = [];
 
     $(document).ready(function(){
       $('#kenburns-slideshow').Kenburns({
@@ -364,9 +366,9 @@
         $("#gallery"+clickedNum).width("100%");
         $("#galleryIntro").attr("data-num",clickedNum);
         $(".pointerCover").removeClass("stayX");
-                
+
       });
-      
+
       $(".closeGallery").click(function(){
         var clickedNum = $(this).attr("data-num");
         $("#galleryIntroBar a.active").removeClass("active");

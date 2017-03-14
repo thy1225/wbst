@@ -185,7 +185,7 @@
                     <li><a href="news.html">最新消息</a></li>
                   </ul>
                 </div>
-                
+
               </div>
             </div>
           </div>
@@ -240,7 +240,7 @@
 
         function createCalendar(calendarData){
           $("#datepickerBox").datepicker({
-              firstDay: 1,
+              firstDay: 0,
               numberOfMonths: 2,
               minDate: today,
               maxDate: lastDayBooking,
@@ -292,7 +292,7 @@
             $("#timeList").html(items.join(""));
             reactivateTimeBtn();
           },
-          
+
           error: function() {
             alert("JSON LOAD ERROR!!!2");
           }
