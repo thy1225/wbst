@@ -210,13 +210,16 @@
       <div id="tsmc_footerInfo">
           <div class="container">
             <div class="row">
-              <div class="col-lg-4 col-md-5 col-sm-12">
+              <div class="col-md-4 col-sm-12">
                 <div class="group visitInfo">
                   <div class="groupTitle">Visitor Information</div>
                   <div class="row">
                     <div class="infoItem col-md-12 col-sm-6 col-xs-12 withLabel">
-                      <span class="openL">Opening Hours:</span><span class="dayL">Monday~Friday:</span>09:00~17:00<br>
-                      <span class="dayL">Saturday:</span>10:00~17:00
+                      <span class="openL">Opening Hours:</span>
+                      <div class="indentBox doubleIndent">
+                        <span class="dayL">Monday~Friday:</span>09:00~17:00<br>
+                        <span class="dayL">Saturday:</span>10:00~17:00
+                      </div>
                     </div>
                     <div class="infoItem col-md-12 col-sm-6 col-xs-12 withLabel">
                       <span class="openL">Closed:</span><div class="indentBox">Sundays, National holidays, and other necessary closing days that will be officially announced</div>
@@ -229,7 +232,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3 col-sm-5 hidden-print">
+              <div class="col-md-2 col-sm-3 hidden-print">
                 <div class="group">
                   <div class="groupTitle">About the Museum</div>
                   <ul class="groupList">
@@ -239,7 +242,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-md-3 col-sm-5 hidden-print">
+              <div class="col-md-2 col-sm-3 hidden-print">
                 <div class="group">
                   <div class="groupTitle">Plan Your Visit</div>
                   <ul class="groupList">
@@ -251,15 +254,70 @@
                   </ul>
                 </div>
               </div>
-              <div class="col-md-1 col-sm-2 hidden-print">
+              <div class="col-md-2 col-sm-3 hidden-print">
                 <div class="group">
                   <div class="groupTitle">News</div>
                   <ul class="groupList">
                     <li><a href="news.html">Latest News</a></li>
                   </ul>
                 </div>
-                
+
               </div>
+              <!-- 新增假資料 START -->
+                <div class="col-md-2 col-sm-3 hidden-print">
+                  <div class="group">
+                    <div class="groupTitle">新增分類選單1</div>
+                    <ul class="groupList">
+                      <li><a href="#">新增分頁1</a></li>
+                      <li><a href="#">新增分頁2</a></li>
+                      <li><a href="#">新增分頁3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="clearfix visible-xs-block visible-sm-block visible-md-block visible-lg-block"></div>
+
+                <div class="col-md-2 col-sm-3 hidden-print col-md-offset-4">
+                  <div class="group">
+                    <div class="groupTitle">新增分類選單2</div>
+                    <ul class="groupList">
+                      <li><a href="#">新增分頁1</a></li>
+                      <li><a href="#">新增分頁2</a></li>
+                      <li><a href="#">新增分頁3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-3 hidden-print">
+                  <div class="group">
+                    <div class="groupTitle">新增分類選單3</div>
+                    <ul class="groupList">
+                      <li><a href="#">新增分頁1</a></li>
+                      <li><a href="#">新增分頁2</a></li>
+                      <li><a href="#">新增分頁3</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-3 hidden-print">
+                  <div class="group">
+                    <div class="groupTitle">新增分類選單4</div>
+                    <ul class="groupList">
+                      <li><a href="#">新增分頁1</a></li>
+                      <li><a href="#">新增分頁2</a></li>
+                      <li><a href="#">新增分頁3</a></li>
+                      <li><a href="#">新增分頁4</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-3 hidden-print">
+                  <div class="group">
+                    <div class="groupTitle">新增分類選單4</div>
+                    <ul class="groupList">
+                      <li><a href="#">新增分頁1</a></li>
+                      <li><a href="#">新增分頁2</a></li>
+                      <li><a href="#">新增分頁3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              <!-- 新增假資料 END -->
             </div>
           </div>
       </div>
@@ -359,9 +417,9 @@
         $("#gallery"+clickedNum).width("100%");
         $("#galleryIntro").attr("data-num",clickedNum);
         $(".pointerCover").removeClass("stayX");
-                
+
       });
-      
+
       $(".closeGallery").click(function(){
         var clickedNum = $(this).attr("data-num");
         $("#galleryIntroBar a.active").removeClass("active");
